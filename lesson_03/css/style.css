@@ -1,0 +1,43 @@
+@import url("reset.css");
+
+.logo [class*="top"] {
+    color: #0073ff
+}
+
+.logo [class*="bottom"] {
+    color: #ffd000;
+}
+
+.navigation {
+    color: #d620d6;
+}
+
+.main-section h1 {
+    color: brown;
+}
+
+.main-section__text span {
+    color: red;
+}
+
+.places h3 {
+    color: purple;
+}
+
+.content-section h2 {
+    color: orangered;
+}
+
+.place__content>p,
+.main-section h1~p {
+    color: #0073ff;
+}
+
+
+.place__content p+.location {
+    color: lightseagreen;
+}
+
+.place__content p+.location>span {
+    color: gray;
+}
