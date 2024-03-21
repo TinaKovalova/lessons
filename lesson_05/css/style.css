@@ -1,0 +1,79 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+
+body {
+    font-family: "Proxima Nova", "Roboto Flex", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.87;
+    color: #2b2929;
+}
+
+[class$="__container"] {
+
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.nav__container {
+    max-width: 67.19%;
+}
+
+.main__container {
+    max-width: 56.77%;
+}
+
+.header {
+    padding: 25px 0;
+}
+
+.decoration-section__title,
+.choice-section__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.decoration-section {
+    background-color: #f8f8f8;
+    padding-top: 45px;
+    padding-bottom: 38px;
+}
+
+.decoration-section__title,
+.decoration-section__image,
+.decoration-section__text,
+.decoration-section__furniture {
+    margin-bottom: 40px;
+}
+
+
+.decoration-section__image {
+    width: 100%;
+}
+
+.decoration-section__text p+p {
+    margin-top: 14px;
+}
+
+.decoration-section__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.furniture__list li+li {
+    margin-top: 20px;
+}
+
+.furniture__item {
+    padding-left: 47px;
+    background: url("../img/furniture-icon.svg") 2.5px 2.5px / 32px 32px no-repeat;
+}
+
+.decoration-section__summary {
+    margin-top: 40px;
+
+}
