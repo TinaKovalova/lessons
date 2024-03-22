@@ -10,22 +10,19 @@ body {
     color: #2b2929;
 }
 
-[class$="__container"] {
-
+.container {
+    max-width: 68.23%;
+    /*(1290+20)/1920*/
     margin: 0 auto;
     padding: 0 10px;
 }
 
-.nav__container {
-    max-width: 67.19%;
-}
-
-.main__container {
-    max-width: 56.77%;
-}
-
 .header {
     padding: 25px 0;
+}
+
+.page {
+    background-color: #f8f8f8;
 }
 
 .decoration-section__title,
@@ -36,9 +33,7 @@ body {
 }
 
 .decoration-section {
-    background-color: #f8f8f8;
-    padding-top: 45px;
-    padding-bottom: 38px;
+    padding: 42px 100px 38px 120px;
 }
 
 .decoration-section__title,
@@ -75,5 +70,4 @@ body {
 
 .decoration-section__summary {
     margin-top: 40px;
-
 }
