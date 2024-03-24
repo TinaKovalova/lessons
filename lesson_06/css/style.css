@@ -27,7 +27,6 @@ body {
 
 [class$="container-1280"] {
     max-width: 90.28%;
-    /* 1300/1440 */
     /*(1280+20)/1440*/
 }
 
@@ -91,15 +90,14 @@ body {
 
 
 /* Decoration section */
+.decoration-section .wrapper {
+    padding: 42px 7.75% 38px 9.3%;
+}
 
 .decoration-section__title {
     font-size: 40px;
     font-weight: 600;
     line-height: 1.2;
-}
-
-.decoration-section {
-    padding: 42px 7.75% 38px 9.3%;
 }
 
 .decoration-section__title,
@@ -143,7 +141,17 @@ body {
 .eduplay-section {
     font-family: "Quicksand", sans-serif;
     color: #fff;
-    background: url("../img/eduplay-section/holographic.png")0 0 / cover no-repeat, #914cff;
+    background: url("../img/eduplay-section/letters/x-letter.svg") 46% 1.7% / 50px no-repeat,
+        url("../img/eduplay-section/letters/f-letter.svg") 85% 50% / 18px no-repeat,
+        url("../img/eduplay-section/letters/m-letter.svg") 47% 87% / 37px no-repeat,
+        url("../img/eduplay-section/letters/k-letter.svg") 57% 68% / 25px no-repeat,
+        url("../img/eduplay-section/letters/o-letter.svg") 44% 20% / 27px no-repeat,
+        url("../img/eduplay-section/letters/p-letter.svg") 53% 31% / 28px no-repeat,
+        url("../img/eduplay-section/letters/0-number.svg") 29% bottom / 29px no-repeat,
+        url("../img/eduplay-section/letters/8-number.svg") 51% 45% / 28px no-repeat,
+        url("../img/eduplay-section/letters/8-number.svg") 26% -4% / 27px no-repeat,
+        url("../img/eduplay-section/holographic.png")0 0 / cover no-repeat,
+        #914cff;
     font-size: 0;
 }
 
@@ -153,7 +161,6 @@ body {
     padding-top: 121px;
     /* 600/1280 =46.875%; */
     display: inline-block;
-
 }
 
 .eduplay-section__title {
