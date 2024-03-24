@@ -25,6 +25,12 @@ body {
     /*(1320+20)/1920*/
 }
 
+[class$="container-1280"] {
+    max-width: 90.28%;
+    /* 1300/1440 */
+    /*(1280+20)/1440*/
+}
+
 .header {
     padding: 25px 0;
 }
@@ -129,6 +135,64 @@ body {
 
 .decoration-section__summary {
     margin-top: 40px;
+}
+
+
+/* EduPlay section */
+
+.eduplay-section {
+    font-family: "Quicksand", sans-serif;
+    color: #fff;
+    background: url("../img/eduplay-section/holographic.png")0 0 / cover no-repeat, #914cff;
+    font-size: 0;
+}
+
+.eduplay-section__content {
+    width: 50%;
+    min-width: 500px;
+    padding-top: 121px;
+    /* 600/1280 =46.875%; */
+    display: inline-block;
+
+}
+
+.eduplay-section__title {
+    max-width: 600px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.eduplay-section__text {
+    max-width: 600px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.eduplay-section__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.56;
+    color: #0d1216;
+    padding: 15px 20px 15px 40px;
+    border-radius: 8px;
+    background: url("../img/eduplay-section/button-label-hat.png")20px center / 1em no-repeat, #fff;
+    margin-bottom: 24px;
+}
+
+.eduplay-section__image-wrapper {
+    width: 50%;
+    display: inline-block;
+    text-align: end;
+    vertical-align: top;
+}
+
+.eduplay-section__image {
+    display: inline-block;
+    width: 515px;
 }
 
 .footer {
