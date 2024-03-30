@@ -26,18 +26,103 @@ body {
         /*(1272+20)/1512*/
 }
 
+
+
+
 .header {
     padding: 25px 0;
 }
 
 .page {
     /* background-color: #f8f8f8; */
+}
 
+
+/* About section */
+
+.about-section {
+    padding: 120px 0;
+    background: linear-gradient(-180deg, #000000e6 0, #000000fc 100%),
+        url("../img/about-section/bg-section.jpg")center /cover no-repeat;
+    color: #fff;
+
+}
+
+.about-section .container-1272>*:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.about-section__content {
+    font-family: "Exo", sans-serif;
+    text-align: center;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.about-section__content :not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.about-section__title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.17;
+    text-transform: uppercase;
+}
+
+.about-section__title::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 40.42%;
+    /* 401/992 */
+    height: 1px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
+}
+
+.about-section__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2.2;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.about-section__list {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0;
+    font-weight: 500;
+    line-height: 1.25;
+    text-transform: capitalize;
+    margin: 0 auto;
+    max-width: 1150px;
+}
+
+.about-section__list>*:not(:first-child) {
+    margin-left: 60px;
+}
+
+.about-section__item {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.about-section__item::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 60px;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1) 100%);
 }
 
 /* Practice section */
 .practice-section {
     counter-reset: #000;
+    padding-top: 60px;
 }
 
 .practice-section__title {
@@ -83,9 +168,7 @@ body {
     outline: none;
     text-transform: uppercase;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
-
 }
-
 
 .qa-title {
     font-size: 40px;
@@ -98,22 +181,17 @@ body {
 
 .qa-list-item {
     padding: 0 0 32px 40px;
-
 }
 
 .qa-list-item:not(:last-child) {
     border-bottom: 1px solid rgba(207, 211, 214, 0.5);
 }
 
-.block {}
-
-
 .block__action {
     display: inline-block;
     min-height: max-content;
     width: 100%;
     padding: 23px 0 23px;
-
 }
 
 .block-title {
@@ -246,6 +324,7 @@ body {
     background: url("../img/practice-section/star.svg") center / cover no-repeat;
     width: 16px;
     height: 16px;
+    border-radius: 50%;
     vertical-align: middle;
 }
 
@@ -257,6 +336,11 @@ body {
     margin-left: 10px;
 }
 
+.test-icon-before__item:hover::before,
+.test-icon-before__item:hover::after {
+    background-color: violet;
+}
+
 .test-number-before__item::before {
     counter-increment: list-number;
     content: counter(list-number);
@@ -266,6 +350,10 @@ body {
     font-style: normal;
     margin-right: 15px;
     color: orangered;
+}
+
+.test-number-before__item:hover::before {
+    color: green;
 }
 
 /* GAME */
