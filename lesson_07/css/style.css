@@ -1,0 +1,467 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+
+body {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.87;
+    color: #2b2929;
+    counter-reset: list-number;
+}
+
+[class*="container"] {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+[class$="container-1290"] {
+    max-width: 68.23%;
+    /*(1290+20)/1920*/
+}
+
+[class$="container-1272"] {
+    max-width: 85.45%
+        /*(1272+20)/1512*/
+}
+
+.header {
+    padding: 25px 0;
+}
+
+.page {
+    /* background-color: #f8f8f8; */
+
+}
+
+/* Practice section */
+.practice-section {
+    counter-reset: #000;
+}
+
+.practice-section__title {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.brends {
+    font-size: 20px;
+}
+
+.brends-item {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 16px;
+}
+
+.brends-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.brends-link {
+    background-color: rgb(36, 95, 231);
+    width: 100%;
+    border-radius: 20px;
+}
+
+.brends-link:visited {
+    background-color: #9fb1dd;
+}
+
+.brends-link:hover {
+    background-color: #4b7ae7;
+}
+
+.brends-link:active {
+    background-color: rgb(23, 59, 142);
+}
+
+.brends-link:focus {
+    outline: none;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.qa-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.qa-list {
+    width: 70%;
+}
+
+.qa-list-item {
+    padding: 0 0 32px 40px;
+
+}
+
+.qa-list-item:not(:last-child) {
+    border-bottom: 1px solid rgba(207, 211, 214, 0.5);
+}
+
+.block {}
+
+
+.block__action {
+    display: inline-block;
+    min-height: max-content;
+    width: 100%;
+    padding: 23px 0 23px;
+
+}
+
+.block-title {
+    display: inline-block;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 90%;
+    vertical-align: middle;
+}
+
+.block__link {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    text-align: right;
+    background: url("../img/practice-section/plus.svg") center / 100% no-repeat;
+}
+
+.block__link:hover {
+    opacity: 0.7;
+}
+
+.block__link:active {
+    background-image: url("../img/practice-section/minus.svg");
+}
+
+.block-text {
+    display: none;
+    padding: 0 10px 0 67px;
+
+}
+
+.block-text:target {
+    display: block;
+}
+
+.options {
+    font-size: 0;
+
+}
+
+.options__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    min-width: 245px;
+
+}
+
+.options__item:not(:last-child) {
+    margin-right: 100px;
+}
+
+.options__item:hover .card__text {
+    display: block;
+}
+
+.card {
+    margin-bottom: 16px;
+}
+
+.card__img-wrapper {
+    height: 105px;
+}
+
+.card__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.card__text {
+    display: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.test-block {
+    padding-top: 30px;
+}
+
+.children>* {
+    border-radius: 50%;
+    border: 2px solid blueviolet;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.children :nth-child(even) {
+    background-color: aqua;
+}
+
+.children :nth-child(3n) {
+    background-color: palevioletred;
+}
+
+.children :nth-child(4n+1) {
+    background-color: orange;
+}
+
+.children p:last-of-type {
+    border-style: dotted;
+}
+
+.children:has(p) {
+    display: inline-block;
+    border: 2px dashed purple;
+    width: max-content;
+    padding: 5px;
+}
+
+.test-before-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.test-icon-before,
+.test-number-before {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.test-icon-before__item::before,
+.test-icon-before__item::after {
+    content: "";
+    display: inline-block;
+    background: url("../img/practice-section/star.svg") center / cover no-repeat;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.test-icon-before__item::before {
+    margin-right: 10px;
+}
+
+.test-icon-before__item::after {
+    margin-left: 10px;
+}
+
+.test-number-before__item::before {
+    counter-increment: list-number;
+    content: counter(list-number);
+    font-family: "Rakkas", serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 15px;
+    color: orangered;
+}
+
+/* GAME */
+.game {
+    font-size: 0;
+    min-height: max-content;
+    border: 2px dotted black;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.game :not(.game__line-0) {
+    visibility: hidden;
+}
+
+.game :not(.game__line-win) {
+    background-color: #4b7ae7;
+}
+
+.game__line-4-1,
+.game__line-4-2,
+.game__line-5-1,
+.game__line-5-2,
+.game__line-6-1,
+.game__line-6-2,
+.game__line-9-1,
+.game__line-9-2,
+.game__line-win {
+    display: inline-block;
+}
+
+.game__line-4-1,
+.game__line-5-1,
+.game__line-6-1 {
+    visibility: hidden;
+}
+
+.game__line-0:hover+.game__line-1,
+.game__line-1:hover,
+.game__line-1:hover+.game__line-2,
+.game__line-2:hover,
+.game__line-2:hover+.game__line-3,
+.game__line-3:hover,
+.game__line-3:hover~.game__line-4-2,
+.game__line-4-2:hover,
+.game__line-4-2:hover~.game__line-5-2,
+.game__line-5-2:hover,
+.game__line-5-2:hover~.game__line-6-2,
+.game__line-6-2:hover,
+.game__line-6-2:hover~.game__line-7,
+.game__line-7:hover,
+.game__line-7:hover~.game__line-8,
+.game__line-8:hover,
+.game__line-8:hover~.game__line-9-1,
+.game__line-9-1:hover,
+.game__line-9-1:hover~.game__line-9-2,
+.game__line-9-2:hover,
+.game__line-9-2:hover~.game__line-win,
+.game__line-9-2:hover {
+    visibility: visible;
+}
+
+.game__line-0 {
+    background: url("../img/practice-section/flag-green-icon.png") center / contain no-repeat, #4b7ae7;
+}
+
+.game__line-0,
+.game__line-1 {
+    width: 80px;
+    height: 50px;
+}
+
+.game__line-2 {
+    width: 50px;
+    height: 60px;
+}
+
+.game__line-3 {
+    width: 100%;
+    height: 50px;
+}
+
+.game__line-4-1 {
+    width: 95%;
+    height: 40px;
+}
+
+.game__line-4-2 {
+    width: 5%;
+    height: 40px;
+}
+
+.game__line-5-1 {
+    width: 50%;
+    height: 35px;
+}
+
+.game__line-5-2 {
+    width: 50%;
+    height: 35px;
+}
+
+.game__line-6-1 {
+    width: 50%;
+    height: 60px;
+}
+
+.game__line-6-2 {
+    width: 3%;
+    height: 60px;
+}
+
+.game__line-7 {
+    width: 53%;
+    height: 30px;
+}
+
+.game__line-8 {
+    width: 2%;
+    height: 100px;
+}
+
+.game__line-9-1 {
+    width: 50%;
+    height: 20px;
+    vertical-align: top;
+}
+
+.game__line-9-2 {
+    width: 20%;
+    height: 100px;
+    vertical-align: top;
+    background: url("../img/practice-section/flag-red-icon.png")center/contain no-repeat;
+}
+
+.game__line-win {
+    width: 20%;
+    height: 100px;
+    vertical-align: top;
+    background: url("../img/practice-section/win-icon.png")center/contain no-repeat;
+}
+
+/* Decoration section */
+.decoration-section .wrapper {
+    padding: 42px 7.75% 38px 9.3%;
+}
+
+.decoration-section__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.decoration-section__title,
+.decoration-section__image,
+.decoration-section__text,
+.decoration-section__furniture {
+    margin-bottom: 40px;
+}
+
+.decoration-section__image {
+    width: 100%;
+}
+
+.decoration-section__text p+p {
+    margin-top: 14px;
+}
+
+.decoration-section__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.furniture__list li+li {
+    margin-top: 20px;
+}
+
+.furniture__item {
+    padding-left: 47px;
+    background: url("../img/decoration-section/furniture-icon.svg") 2.5px 2.5px / 32px 32px no-repeat;
+}
+
+.decoration-section__summary {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+.footer {
+    margin-top: auto;
+    padding: 30px 0;
+}
