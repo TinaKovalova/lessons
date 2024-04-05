@@ -1,0 +1,70 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.26;
+    /* 24/19 */
+}
+
+.section-title {
+    font-size: 40px;
+    line-height: 120%;
+    /* 48/40 */
+    color: #2B2929;
+}
+
+.header,
+.product__availability,
+.product__params {
+    color: #535353;
+}
+
+.header__top {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.87;
+    /* 30/16 */
+}
+
+.nav__item,
+.network__item,
+.menu-link__item {
+    display: inline-block;
+
+}
+
+.button {
+    padding: 11px 20px;
+    border-radius: 8px;
+    background-color: #FFBC57;
+    color: #fff;
+}
+
+.category-card__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url("../img/icons/arrow-in-circle.svg") center/cover no-repeat;
+}
+
+.products-section__title-link {
+    color: #FFBC57;
+}
+
+.product__availability::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("../img/icons/check.svg") center / cover no-repeat;
+}
+
+.product__price--crossed-out {
+    text-decoration: line-through;
+}
+
+.product__price--crossed-red {
+    color: #E03D3D;
+}
