@@ -68,3 +68,17 @@ body {
 .product__price--crossed-red {
     color: #E03D3D;
 }
+
+.product__favourite-btn,
+.product__cart-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.product__favourite-btn {
+    background: url("../img/icons/selected-gray.svg") center/cover no-repeat;
+}
+
+.product__cart-btn {
+    background: url("../img/icons/cart-yellow.svg") center/cover no-repeat;
+}
