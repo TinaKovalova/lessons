@@ -8,6 +8,7 @@ body {
     line-height: 1.26;
     /* 24/19 */
     color: #2B2929;
+    background-color: #f8f8f8;
 }
 
 .wrapper {
@@ -25,6 +26,7 @@ body {
     background-color: #FFFFFF;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .header__pannel {
@@ -44,6 +46,21 @@ body {
 .logo {
     vertical-align: top;
     margin-right: 34px;
+}
+
+.back-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: url("../img/icons/arrow-in-circle.svg") center/cover no-repeat;
+    transform: rotate(-45deg);
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
+.back-btn:hover {
+    background-color: #ede0cc;
 }
 
 .button {
@@ -84,7 +101,7 @@ body {
     left: 0;
     width: fit-content;
     display: none;
-    border: 1px solid gray;
+    background-color: #FFFFFF;
     border-radius: 8px;
 }
 
@@ -111,8 +128,6 @@ body {
 
     font-size: 20px;
     line-height: 1.4;
-    /* 28/20 */
-    background-color: #FFFFFF;
 }
 
 
@@ -149,7 +164,6 @@ body {
     display: block;
 }
 
-
 .main-menu__item-text {
     display: inline-block;
     min-width: 53.67%;
@@ -175,4 +189,76 @@ body {
 
 .sub-menu__item:hover {
     background-color: #FFBC57;
+}
+
+/* category-section */
+
+
+.categories-section__container>*:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.categories-section__title {
+    font-size: 40px;
+    line-height: 1.2;
+    color: #2B2929;
+    /* 48/40 */
+}
+
+.categories-section__collection {
+    font-size: 0;
+    margin: 0 -5px;
+}
+
+.category-card {
+    position: relative;
+    width: 19.23%;
+    min-width: 192px;
+    height: 23.07%;
+    border-radius: 8px;
+    background: url("../img/categories/frame.svg") bottom / 100% no-repeat, rgba(255, 255, 255, 1);
+    box-shadow: -3px 4px 15px 0 rgba(0, 0, 0, .06);
+    margin: 0 5px 5px;
+    display: inline-block;
+}
+
+
+.category-card__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    width: 100%;
+    padding: 20px;
+    text-align-last: justify;
+}
+
+.category-card__title {
+    color: #2B2929;
+    display: inline-block;
+}
+
+.category-card__amount {
+    color: #B1B1B1;
+}
+
+.category-card__image {
+    width: 100%;
+}
+
+.category-card__icon-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 20%;
+    height: 16.67%;
+    background: url("../img/icons/arrow-in-circle.svg") center/cover no-repeat;
+}
+
+/* Footer */
+
+.footer__container {
+    padding: 25px 0;
 }
