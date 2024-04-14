@@ -1,0 +1,22 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="#F5F5F5"/>
+<g id="&#208;&#154;&#208;&#176;&#209;&#130;&#208;&#176;&#208;&#187;&#208;&#190;&#208;&#179; &#209;&#130;&#208;&#190;&#208;&#178;&#208;&#176;&#209;&#128;&#209;&#150;&#208;&#178;" clip-path="url(#clip0_2_4)">
+<rect width="1920" height="1060" transform="translate(-619 -98)" fill="#F8F8F8"/>
+<g id="header">
+<rect id="bg-white" x="-619" y="-38" width="1920" height="160" fill="white"/>
+<g id="main">
+<g id="btn-catalog">
+<rect x="-20" y="-11" width="145" height="46" rx="8" fill="#FFBC57"/>
+<g id="close-catalog">
+<path id="Vector" d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM15.7 14.3C16.1 14.7 16.1 15.3 15.7 15.7C15.3 16.1 14.7 16.1 14.3 15.7L12 13.4L9.7 15.7C9.3 16.1 8.7 16.1 8.3 15.7C7.9 15.3 7.9 14.7 8.3 14.3L10.6 12L8.3 9.7C7.9 9.3 7.9 8.7 8.3 8.3C8.7 7.9 9.3 7.9 9.7 8.3L12 10.6L14.3 8.3C14.7 7.9 15.3 7.9 15.7 8.3C16.1 8.7 16.1 9.3 15.7 9.7L13.4 12L15.7 14.3Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2_4">
+<rect width="1920" height="1060" fill="white" transform="translate(-619 -98)"/>
+</clipPath>
+</defs>
+</svg>
