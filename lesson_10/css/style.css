@@ -212,7 +212,7 @@ body {
     border-radius: 8px;
     background: url("../img/categories/frame.svg") bottom / 100% no-repeat, rgba(255, 255, 255, 1);
     box-shadow: -3px 4px 15px 0 rgba(0, 0, 0, .06);
-    margin: 0 5px 5px;
+    margin: 0 5px 24px;
     display: inline-block;
 }
 
@@ -267,7 +267,12 @@ body {
     right: 20px;
     width: 20%;
     height: 16.67%;
+    border-radius: 50%;
     background: url("../img/icons/arrow-in-circle.svg") center/contain no-repeat;
+}
+
+.category-card__icon-link:hover {
+    background-color: whitesmoke;
 }
 
 /* Footer */
