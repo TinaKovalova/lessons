@@ -201,7 +201,8 @@ body {
 
 .categories-section__collection {
     font-size: 0;
-    margin: 0 -5px;
+    margin: 0 -5px -24px;
+
 }
 
 .category-card {
