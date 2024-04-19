@@ -62,7 +62,7 @@ body {
 }
 
 .nav__item:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     font-weight: 500;
     background-color: #b6b3de;
 }
@@ -100,25 +100,19 @@ body {
     padding: 10px 5px;
 }
 
-
-/* 2D transform */
-.transform-2d,
-.transform-3d {
-    padding-top: 30px;
-}
-
-.transform-2d__title,
-.transform-3d__title {
+.section-title {
     font-size: 32px;
     line-height: 1.4;
     font-weight: 700;
     color: #3B2C4C;
-    margin-bottom: 30px;
     text-align: center;
 }
 
-.transform-2d__title::before,
-.transform-3d__title::before {
+.section-title:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.section-title::before {
     content: "";
     width: 35px;
     height: 2px;
@@ -127,14 +121,19 @@ body {
     background-color: #3B2C4C;
 }
 
-.transform-2d__title::after,
-.transform-3d__title::after {
+.section-title::after {
     content: "";
     width: 35px;
     height: 2px;
     margin-left: 15px;
     vertical-align: middle;
     background-color: #3B2C4C;
+}
+
+/* ----------2D transform ---------------------------------*/
+.transform-2d,
+.transform-3d {
+    padding-top: 30px;
 }
 
 .transform-2d__wrapper,
@@ -226,7 +225,7 @@ body {
     transition: transform 1s ease-out;
 }
 
-/* 3D */
+/* ------3D transform----------------------------------- */
 
 .block-item__origin-item {
     perspective: 200px;
@@ -260,7 +259,6 @@ body {
     transform-style: flat;
 }
 
-
 .flip__back,
 .flip__front {
     position: absolute;
@@ -292,49 +290,125 @@ body {
     transform: rotateY(0deg);
 }
 
-/* car */
+/* -----CAR-------------------------------------------- */
 .vehicle-section {
-    min-height: 500px;
+    min-height: fit-content;
     background-color: #F3E9DB;
     padding-top: 30px;
 }
 
-.vehicle-section__container {
+.vehicle-section__wrapper {
     padding: 100px 0;
 }
 
 .car {
     font-size: 0;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .car__front {
     position: relative;
-    z-index: 3;
+    z-index: 2;
     display: inline-block;
     border-top: 130px solid #6d6aa5;
-    border-left: 15px solid transparent;
     border-top-left-radius: 250px 100px;
+    border-bottom-left-radius: 20px 50px;
     height: 0;
-    width: 240px;
+    width: 220px;
+}
+
+/* light front */
+.car__front::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -2px;
+    background-color: rgb(231, 208, 77);
+    box-shadow: 2px 2px 5px #b6b3de, 4px 4px 3px #554765;
+    width: 20%;
+    border-radius: 80% 5% 80% 18%;
+    height: 22px;
+    transform: skew(20deg, -30deg);
 }
 
 .car__middle {
     display: inline-block;
+    vertical-align: top;
     background-color: #6d6aa5;
-    height: 130px;
+    height: 129.71px;
     width: 250px;
     position: relative;
-
 }
+
+.car__cabin {
+    height: 90%;
+    width: 95%;
+    border-top-left-radius: 30px 60px;
+    border-top-right-radius: 10px 100px;
+    border-bottom-right-radius: 60px 100px;
+    border-bottom-left-radius: 30px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #807a7a;
+}
+
+.car__cabin::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 30px;
+    height: 45px;
+    border-radius: 50%;
+    border: 6px solid rgb(82, 65, 65);
+    box-shadow: inset 0 0 15px rgb(82, 65, 65);
+    transform: skew(-25deg, -25deg) rotateY(30deg)
+}
+
+.car__cabin::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    height: 30px;
+    border-left: 80px solid rgba(82, 65, 65, 0.5);
+    border-bottom: 55px solid transparent;
+    border-top-left-radius: 15px 30px;
+    box-shadow: inset -2px -2px 15px rgb(82, 65, 65);
+    transform: rotateY(30deg);
+}
+
+.car__seat {
+    width: 55%;
+    height: 30%;
+    background-color: rgb(82, 65, 65);
+    border-radius: 15px 0 8px;
+    transform: translate(60%, 200%);
+}
+
+.car__seat::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -315%;
+    width: 20%;
+    height: 325%;
+    background-color: rgb(82, 65, 65);
+    border-radius: 30% 70% 50% 0;
+    transform: skewX(-15deg) translateX(20px);
+}
+
 
 .car__windshield {
     position: absolute;
     left: 20px;
     top: -70px;
     width: 30px;
-    height: 70px;
+    height: 80px;
     background-color: #6d6aa5;
-    transform: skew(-45deg, -35deg);
+    transform: skew(-45deg, -25deg);
 }
 
 .car__windshield::before {
@@ -346,60 +420,137 @@ body {
     transform: translateX(-100%);
 }
 
-
 .car__door {
     display: inline-block;
-    border-top: 130px solid #b6b3de;
-    height: 0;
-    width: 250px;
-    box-shadow: 0 0 3px #3B2C4C;
+    height: 90%;
+    width: 95%;
+    background-color: #6d6aa5;
     border-top-left-radius: 30px 60px;
     border-top-right-radius: 10px 100px;
     border-bottom-right-radius: 60px 100px;
     border-bottom-left-radius: 30px 30px;
+    box-shadow: 0 0 2px #554765;
     position: relative;
+    z-index: 2;
+}
+
+.car__door::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: 5px;
+    box-shadow: 0 0 5px #554765;
+    top: 15%;
+    right: 10%;
+
 }
 
 .car__mirror {
     position: absolute;
     left: 0;
-    top: -150px;
+    top: -20px;
     width: 65px;
     height: 35px;
     background-color: #6d6aa5;
     border-radius: 50%;
     transform: skewX(-50deg) rotate(20deg);
+    border-bottom: 5px solid #554765;
+    border-right: 2px solid #554765;
 }
 
 
 .car__back {
     position: relative;
+    z-index: 2;
     display: inline-block;
     border-top: 130px solid #6d6aa5;
     height: 0;
-    width: 200px;
+    width: 180px;
     border-top-right-radius: 110px 10px;
-    border-bottom-right-radius: 80px 20px;
+    border-bottom-right-radius: 27px 60px;
 }
 
-.car__back::after,
-.car__front::before {
+/* light back */
+.car__back::after {
     content: "";
+    position: absolute;
+    top: -118px;
+    right: -7px;
+    border-right: 15px solid transparent;
+    border-top: 30px solid rgb(170, 14, 14);
+    border-top-left-radius: 10px;
+    transform: rotate(-27deg);
+
+}
+
+
+/* wheels */
+
+.car__flat-wrapper {
     width: 140px;
     height: 140px;
-    border-radius: 50%;
-    background-color: rgb(18, 17, 17);
-    box-shadow: -5px -5px 5px #3B2C4C;
-    position: absolute;
+    position: relative;
     top: -100px;
 }
 
-
-
-.car__front::before {
-    left: 35%;
+.car__front .car__flat-wrapper {
+    left: 25%;
 }
 
-.car__back::after {
-    left: 10%;
+.car__back .car__flat-wrapper {
+    left: 0;
+}
+
+.car__flat-wrapper::after,
+.car__flat-wrapper::before {
+    content: "";
+    position: absolute;
+    border-top-left-radius: 50% 80%;
+    border-top-right-radius: 50% 80%;
+}
+
+.car__flat-wrapper::after {
+    top: -3%;
+    left: -6%;
+    z-index: -1;
+    width: 112%;
+    height: 74%;
+    background-color: #121111;
+    box-shadow: inset 0 0 20px #393737;
+}
+
+.car__flat-wrapper::before {
+    top: -10%;
+    left: -10%;
+    z-index: -1;
+    width: 121%;
+    height: 81.25%;
+    box-shadow: inset 0 0 10px #554765;
+}
+
+.car__flat {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #121111;
+    box-shadow: inset -5px -5px 5px #3B2C4C, inset 5px 5px 5px #3B2C4C;
+    position: relative;
+}
+
+.car__flat::before,
+.car__flat::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 20px dashed #807a7a;
+    background-color: #121111;
+}
+
+.footer__container {
+    padding: 30px 0;
 }
