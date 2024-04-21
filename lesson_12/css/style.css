@@ -1,0 +1,388 @@
+@import url("fonts.css");
+@import url("reset.css");
+@import url("keyframes.css");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #F3E9DB;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+[class$="__container"] {
+    margin: 0 auto;
+    max-width: 1310px;
+    padding: 0 10px;
+}
+
+.header {
+    min-height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header__container {
+    padding-top: 10px;
+}
+
+.header__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+/* -----CAR-------------------------------------------- */
+.vehicle-section {
+    min-height: 100vh;
+    background: url("../img/bg.webp")0 0/auto 100% repeat-x;
+    position: relative;
+    perspective: 800px;
+}
+
+
+.vehicle-section__wrapper {
+    padding: 80px 0;
+    display: inline-block;
+    position: absolute;
+    top: 37%;
+    right: 250px;
+    animation: move 10s ease-in-out 7s;
+}
+
+.car {
+    font-size: 0;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.car__front {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    border-top: 130px solid #6d6aa5;
+    border-top-left-radius: 250px 100px;
+    border-bottom-left-radius: 20px 50px;
+    height: 0;
+    width: 220px;
+}
+
+/* light front */
+.car__front::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -2px;
+    background-color: rgb(231, 208, 77);
+    box-shadow: 2px 2px 5px #b6b3de, 4px 4px 3px #554765;
+    width: 20%;
+    border-radius: 80% 5% 80% 18%;
+    height: 22px;
+    transform: skew(20deg, -30deg);
+}
+
+.car__front::after {
+    content: "";
+    position: absolute;
+    top: -125px;
+    left: -95%;
+    width: 200px;
+    height: 0;
+    z-index: -1;
+    border-left: 1px solid rgb(231, 208, 77);
+    border-top: 35px solid transparent;
+    border-bottom: 33px solid transparent;
+    width: 0;
+    border-bottom-left-radius: 15% 60%;
+    border-top-left-radius: 15% 60%;
+    border-bottom-right-radius: 90% 80%;
+    opacity: .3;
+    animation-name: turn-on-light;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.car__middle {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #6d6aa5;
+    height: 129.71px;
+    width: 250px;
+    position: relative;
+    perspective: 800px;
+}
+
+.car__cabin {
+    height: 90%;
+    width: 95%;
+    border-top-left-radius: 30px 60px;
+    border-top-right-radius: 10px 100px;
+    border-bottom-right-radius: 60px 100px;
+    border-bottom-left-radius: 30px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #807a7a;
+}
+
+.car__cabin::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 30px;
+    height: 45px;
+    border-radius: 50%;
+    border: 6px solid rgb(82, 65, 65);
+    box-shadow: inset 0 0 15px rgb(82, 65, 65);
+    transform: skew(-25deg, -25deg) rotateY(30deg)
+}
+
+.car__cabin::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    height: 30px;
+    border-left: 80px solid rgba(82, 65, 65, 0.5);
+    border-bottom: 55px solid transparent;
+    border-top-left-radius: 15px 30px;
+    box-shadow: inset -2px -2px 15px rgb(82, 65, 65);
+    transform: rotateY(30deg);
+}
+
+.car__seat {
+    width: 55%;
+    height: 30%;
+    background-color: rgb(82, 65, 65);
+    border-radius: 15px 0 8px;
+    transform: translate(60%, 200%);
+    position: relative;
+
+}
+
+/* passenger */
+.car__seat::after {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: 45px;
+    transform: rotateZ(15deg);
+    height: 190px;
+    width: 100px;
+    background: url("../img/woman-top.webp") 0 0 / 100% 100% no-repeat;
+    visibility: hidden;
+    animation: appear 0s ease forwards 4s;
+}
+
+
+.car__seat::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -315%;
+    width: 20%;
+    height: 325%;
+    background-color: rgb(82, 65, 65);
+    border-radius: 30% 70% 50% 0;
+    transform: skewX(-15deg) translateX(20px);
+}
+
+
+.car__windshield {
+    position: absolute;
+    left: 20px;
+    top: -70px;
+    width: 30px;
+    height: 80px;
+    background-color: #6d6aa5;
+    transform: skew(-45deg, -25deg);
+}
+
+.car__windshield::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: lightskyblue;
+    border-top-left-radius: 50px 40px;
+    transform: translateX(-100%);
+}
+
+.car__door {
+    display: inline-block;
+    height: 90%;
+    width: 95%;
+    background-color: #6d6aa5;
+    border-top-left-radius: 30px 60px;
+    border-top-right-radius: 10px 100px;
+    border-bottom-right-radius: 60px 100px;
+    border-bottom-left-radius: 30px 30px;
+    box-shadow: 0 0 2px #554765;
+    position: relative;
+    z-index: 2;
+    transform-origin: left;
+    animation: open-car-door 2s ease-in-out 3s;
+}
+
+.car__door::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: 5px;
+    box-shadow: 0 0 5px #554765;
+    top: 15%;
+    right: 10%;
+}
+
+.car__mirror {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 65px;
+    height: 35px;
+    background-color: #6d6aa5;
+    border-radius: 50%;
+    transform: skewX(-50deg) rotate(20deg);
+    border-bottom: 5px solid #554765;
+    border-right: 2px solid #554765;
+}
+
+.car__back {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    border-top: 130px solid #6d6aa5;
+    height: 0;
+    width: 180px;
+    border-top-right-radius: 110px 10px;
+    border-bottom-right-radius: 27px 60px;
+}
+
+/* light back */
+.car__back::after {
+    content: "";
+    position: absolute;
+    top: -118px;
+    right: -7px;
+    border-right: 15px solid transparent;
+    border-top: 30px solid rgb(170, 14, 14);
+    border-top-left-radius: 10px;
+    transform: rotate(-27deg);
+}
+
+/* wheels */
+
+.car__flat-wrapper {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    top: -100px;
+}
+
+.car__front .car__flat-wrapper {
+    left: 25%;
+}
+
+.car__back .car__flat-wrapper {
+    left: 0;
+}
+
+.car__flat-wrapper::after,
+.car__flat-wrapper::before {
+    content: "";
+    position: absolute;
+    border-top-left-radius: 50% 80%;
+    border-top-right-radius: 50% 80%;
+}
+
+.car__flat-wrapper::after {
+    top: -3%;
+    left: -6%;
+    z-index: -1;
+    width: 112%;
+    height: 74%;
+    background-color: #121111;
+    box-shadow: inset 0 0 20px #393737;
+}
+
+.car__flat-wrapper::before {
+    top: -10%;
+    left: -10%;
+    z-index: -1;
+    width: 121%;
+    height: 81.25%;
+    box-shadow: inset 0 0 10px #554765;
+}
+
+.car__flat {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #121111;
+    box-shadow: inset -5px -5px 5px #3B2C4C, inset 5px 5px 5px #3B2C4C;
+    position: relative;
+}
+
+.car__flat::before,
+.car__flat::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 20px dashed #807a7a;
+    background-color: #121111;
+    animation:
+        rotate-wheels 810ms linear 6 7s forwards,
+        rotate-back-wheels 800ms linear 6 12s forwards;
+}
+
+.person {
+    height: 350px;
+    width: 100px;
+    display: inline-block;
+    background: url("../img/woman.webp") top/contain no-repeat;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    z-index: 3;
+    transform: translateX(100%);
+    animation:
+        move-toward-car 3s ease-out forwards,
+        disappear 0s ease 4s forwards;
+}
+
+.final {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: transparent;
+    visibility: hidden;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.4;
+    animation: change-final-text 3s ease-in-out 10s forwards;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer__text {
+    text-align: center;
+}
