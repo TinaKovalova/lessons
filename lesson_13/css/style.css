@@ -17,7 +17,7 @@ body {
     flex-direction: column;
 }
 
-[class$="__container"] {
+[class$="container"] {
     margin: 0 auto;
     max-width: 1320px;
     padding: 0 15px;
@@ -65,6 +65,315 @@ body {
     height: 1.263em;
     background: url("../img/products/arrow.svg")center/cover no-repeat;
 }
+
+/* header */
+/* header-top---------------------- */
+.header__top {
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.87;
+    color: #535353;
+
+}
+
+.header__top-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    flex-basis: content;
+    flex-grow: 1;
+}
+
+.navigation__item {}
+
+.navigation__link {}
+
+.messages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.messages__text {}
+
+.messages__list {
+    display: flex;
+
+    column-gap: 10px;
+}
+
+.messages__item {
+    display: flex;
+    align-items: center;
+}
+
+.messages__link {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.messages__link--whatsapp {
+    background-image: url("../img/icons/whatsapp.svg");
+}
+
+.messages__link--telegram {
+    background-image: url("../img/icons/telegram.svg");
+}
+
+.messages__link--viber {
+    background-image: url("../img/icons/viber.svg");
+}
+
+.language-selection {
+    background-color: inherit;
+    font-family: "ProximaNova", sans-serif;
+    color: #535353;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.26;
+}
+
+/* heder middle---------------------------------- */
+.header__middle {
+    padding: 25px 0;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #F8F8F8;
+}
+
+.header__middle-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 34px;
+}
+
+.logo {
+    flex-basis: 250px;
+    height: 50px;
+    flex-shrink: 0;
+    background: url("../img/icons/logo-header.svg") center/contain no-repeat;
+}
+
+.header__actions {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 30px;
+}
+
+.header__btn {
+    flex-basis: 145px;
+    align-self: center;
+}
+
+.btn {
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 1.263;
+    padding: 11px 20px;
+    column-gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.btn--yellow {
+    background-color: #FFBC57;
+}
+
+.btn--icon::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("../img/icons/menu-catalog.svg")center / contain no-repeat;
+    flex-shrink: 0;
+}
+
+.btn__text {
+    / vertical-align: middle;
+}
+
+.search-form {
+    flex-basis: 421px;
+    display: flex;
+}
+
+.search-form__input-block {
+    width: 100%;
+    position: relative;
+}
+
+.search-form__input {
+    padding: 10px 39px 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #B1B1B1;
+    background-color: #FFFFFF;
+
+}
+
+.search-form__input-block::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    background: url("../img/icons/search.svg") center/cover no-repeat;
+}
+
+.header__contacts {
+    display: flex;
+    column-gap: 10px;
+    flex-basis: 230px;
+}
+
+.header-contacts__link {
+    flex-basis: 50px;
+    height: 50px;
+    /* 50/230 */
+    border-radius: 50%;
+    background: url("../img/icons/icon-tel.svg") center/contain no-repeat;
+}
+
+
+.header-contacts__content-block {
+    flex-basis: 136px;
+    /* text-align: center; */
+}
+
+.header-contacts__text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.69;
+    color: #535353;
+}
+
+.header-contacts__select {
+    font-family: "ProximaNova", sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #2B2929;
+
+
+}
+
+.header__user-preferences {}
+
+.user-preferences {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.user-preferences__link {
+    flex-basis: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+.user-preferences__link--selected {
+    background-image: url("../img/icons/selected-colored.svg");
+}
+
+.user-preferences__link--cart {
+    background-image: url("../img/icons/cart-colored.svg");
+}
+
+
+/* header bottom----------------------------- */
+.header__bottom {
+    padding: 18px 0;
+    background-color: #FFFFFF;
+    line-height: 1.26;
+}
+
+.header__bottom-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.promotions-nav {
+    flex-basis: 464px;
+
+
+}
+
+.promotions-nav__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.promotions-nav__item {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.promotions-nav__item::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.promotions-nav__item--star.promotions-nav__item::before {
+    background-image: url("../img/icons/star.svg");
+}
+
+.promotions-nav__sales.promotions-nav__item::before {
+    background-image: url("../img/icons/sale.svg");
+}
+
+.promotions-nav__item--credit.promotions-nav__item::before {
+    background-image: url("../img/icons/credit.svg");
+}
+
+.promotions-nav__link {}
+
+.products-nav {
+    flex-basis: 715px;
+}
+
+.products-nav__menu {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.products-nav__item {}
+
+.products-nav__link {}
 
 /* Categories-section */
 .categories-section {
