@@ -183,7 +183,7 @@ body {
 .btn {
     color: #FFFFFF;
     font-weight: 600;
-    line-height: 1.263;
+    line-height: 1;
     padding: 11px 20px;
     column-gap: 10px;
     display: flex;
@@ -204,9 +204,7 @@ body {
     flex-shrink: 0;
 }
 
-.btn__text {
-    / vertical-align: middle;
-}
+.btn__text {}
 
 .search-form {
     flex-basis: 421px;
@@ -254,6 +252,9 @@ body {
 .header-contacts__content-block {
     flex-basis: 136px;
     /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+
 }
 
 .header-contacts__text {
@@ -261,6 +262,7 @@ body {
     font-weight: 300;
     line-height: 1.69;
     color: #535353;
+    order: 1;
 }
 
 .header-contacts__select {
@@ -269,11 +271,13 @@ body {
     line-height: 1.4;
     font-weight: 600;
     color: #2B2929;
-
+    appearance: none;
+    order: 2;
+    position: relative;
+    padding-right: 34px;
+    background: url("../img/icons/arrow.svg")100% -8px /24px 24px no-repeat;
 
 }
-
-.header__user-preferences {}
 
 .user-preferences {
     display: flex;
