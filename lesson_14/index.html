@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 14</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="header__top-container">
+                    <ul class="navigation">
+                        <li class="navigation__item"><a href="#" class="navigation__link">Про нас</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Оплата</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Доставка та збірка</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Відгуки</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Блог</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+                    </ul>
+                    <div class="messages">
+                        <p class="messages__text">Допомога і консультація:</p>
+                        <ul class="messages__list">
+                            <li class="messages__item"><a href="#" class="messages__link messages__link--whatsapp"></a>
+                            </li>
+                            <li class="messages__item"><a href="#" class="messages__link messages__link--telegram"></a>
+                            </li>
+                            <li class="messages__item"><a href="#" class="messages__link messages__link--viber"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <select class="language-selection" name="language" id="language">
+                        <option value="ua">UA</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+            </div>
+            <div class="header__middle">
+                <div class="header__middle-container">
+                    <a href="#" class="logo"></a>
+                    <div class="header__actions">
+                        <button class="header__btn btn btn--icon btn--yellow">
+                            <span class="btn__text">Каталог</span>
+                        </button>
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-form__input-block">
+                                <input class="search-form__input" type="search" placeholder="Пошук товарів">
+                            </div>
+                        </form>
+                        <div class="header__contacts header-contacts">
+                            <a href="tel:+380679294545" class="header-contacts__link"></a>
+                            <div class="header-contacts__content-block">
+                                <label class="header-contacts__text" for="phones-select">Щодня з 9:00 до 18:00</label>
+                                <div class="arrow"></div>
+                                <select name="phones-select" id="phones-select" class="header-contacts__select">
+                                    <option value="+380679294545">067 929-45-45</option>
+                                    <option value="+380501334545">050 133-45-45</option>
+                                    <option value="+380931707545">093 170-75-45</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="header__user-preferences user-preferences">
+                            <a href="#" class="user-preferences__link user-preferences__link--selected"></a>
+                            <a href="#" class="user-preferences__link user-preferences__link--cart"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="header__bottom-container">
+                    <div class="promotions-nav">
+                        <ul class="promotions-nav__menu">
+                            <li class="promotions-nav__item promotions-nav__item--star">
+                                <a href="#" class="promotions-nav__link">Акції</a>
+                            </li>
+                            <li class="promotions-nav__item promotions-nav__sales">
+                                <a href="#" class="promotions-nav__link">Розпродаж</a>
+                            </li>
+                            <li class="promotions-nav__item promotions-nav__item--credit">
+                                <a href="#" class="promotions-nav__link">Купити в кредит</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products-nav">
+                        <ul class="products-nav__menu">
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Дитяча</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Кухня</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Ванна</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Спальня</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Передпокій</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Вітальня</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Офіс</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <div class="order-section">
+                <div class="order-section__container">
+                    <h2 class="order-section__title section-title">Оформлення замовлення</h2>
+                    <div class="order-section__order-block">
+                        <form action="#" class="order-section__form order-form">
+                            <div class="order-form__customer-data customer-data">
+                                <h3 class="customer-data__title">Інформація про покупця</h3>
+                                <div class="customer-data__info-block info-block">
+                                    <input type="text" class="info-block__input" name="form[]" placeholder="Прізвище"
+                                        required>
+                                    <input type="text" class="info-block__input" name="form[]"
+                                        placeholder="Контактний телефон" required>
+                                    <input type="text" class="info-block__input" name="form[]" placeholder="Ім’я"
+                                        required>
+                                    <input type="email" class="info-block__input" name="form[]" placeholder="E-mail"
+                                        required>
+                                    <input type="text" class="info-block__input" name="form[]" placeholder="По батькові"
+                                        required>
+                                    <div class="info-block__checkbox-block">
+                                        <label class="info-block__checkbox-lable">
+                                            <input type="checkbox" class="info-block__checkbox">
+                                            <span class="info-block__checkbox-text">Отримуватиме замовлення інша
+                                                людина</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <a href="#" class="logo"></a>
+                <ul class="navigation">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Про нас</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Оплата</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Доставка та збірка</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Відгуки</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Блог</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+                </ul>
+                <div class="messages">
+                    <p class="messages__text">Допомога і консультація:</p>
+                    <ul class="messages__list">
+                        <li class="messages__item"><a href="#" class="messages__link messages__link--whatsapp"></a>
+                        </li>
+                        <li class="messages__item"><a href="#" class="messages__link messages__link--telegram"></a>
+                        </li>
+                        <li class="messages__item"><a href="#" class="messages__link messages__link--viber"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer__copyright">&copy; KROVATO - Технології сну - 2022. Всі права захищені.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
