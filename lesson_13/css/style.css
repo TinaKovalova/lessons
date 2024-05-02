@@ -244,6 +244,14 @@ body {
     background: url("../img/icons/search.svg") center/cover no-repeat;
 }
 
+.search-form__input::-webkit-search-cancel-button {
+    background-color: #2B2929;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: url("../img/icons/cancel-button.svg") center/contain no-repeat;
+}
+
 .header__contacts {
     display: flex;
     column-gap: 10px;
@@ -372,6 +380,10 @@ body {
     color: #ffad31;
 }
 
+.promotions-nav__link {
+    transition: color 0.3s;
+}
+
 .promotions-nav__item:hover:before {
     transform: rotate(360deg);
 }
@@ -495,7 +507,6 @@ body {
 
 .product {
     flex-basis: 300px;
-    min-height: 468px;
     border-radius: 8px;
     border: 1px solid #E3E2E2;
     background: #FFF;
@@ -621,7 +632,7 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    transition: scale 0.3s;
+    transition: transform 0.3s;
 }
 
 .product__btn--cart {
@@ -647,23 +658,28 @@ body {
     padding: 80px 0 70px;
 }
 
+.promotions-section__header {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.promotions-section__title {
+    flex-grow: 1;
+}
+
 .promotions-section__title:not(:last-child) {
     margin-bottom: 46px;
 }
 
-.slider {
-    position: relative;
-}
-
-.slider__btn-block {
-    position: absolute;
-    right: 0;
-    top: -100px;
+.controllers {
     display: flex;
+    justify-content: space-between;
     column-gap: 20px;
 }
 
-.slider__btn {
+.controllers__btn {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -673,17 +689,22 @@ body {
     transition: box-shadow 0.3s;
 }
 
-.slider__btn:hover {
+.controllers__btn:hover {
     box-shadow: 0 0 8px #FFBC57;
 }
 
-.slider__btn--prev {
+.controllers__btn--prev {
     background-image: url("../img/icons/arrow-left.svg");
 }
 
-.slider__btn--next {
+.controllers__btn--next {
     background-image: url("../img/icons/arrow-left.svg");
     transform: rotate(180deg);
+}
+
+
+.slider {
+    position: relative;
 }
 
 

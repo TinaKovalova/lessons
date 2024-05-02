@@ -49,9 +49,9 @@
                         <button class="header__btn btn btn--icon btn--yellow">
                             <span class="btn__text">Каталог</span>
                         </button>
-                        <form action="GET" class="search-form">
+                        <form action="#" method="get" class="search-form">
                             <div class="search-form__input-block">
-                                <input class="search-form__input" type="text" placeholder="Пошук товарів">
+                                <input class="search-form__input" type="search" placeholder="Пошук товарів">
                             </div>
                         </form>
                         <div class="header__contacts header-contacts">
@@ -462,15 +462,18 @@
             </div>
             <div class="promotions-section">
                 <div class="promotions-section__container">
-                    <h2 class="promotions-section__title section-title">
-                        Акції
-                        <a href="#" class="section-title__link">Дивитись всі</a>
-                    </h2>
-                    <div class="promotions-section__slider slider">
-                        <div class="slider__btn-block">
-                            <div class="slider__btn slider__btn--prev"></div>
-                            <div class="slider__btn slider__btn--next"></div>
+                    <div class="promotions-section__header">
+                        <h2 class="promotions-section__title section-title">
+                            Акції
+                            <a href="#" class="section-title__link">Дивитись всі</a>
+                        </h2>
+                        <div class="promotions-section__btn-block controllers">
+                            <div class="controllers__btn controllers__btn--prev"></div>
+                            <div class="controllers__btn controllers__btn--next"></div>
                         </div>
+                    </div>
+                    <div class="promotions-section__slider slider">
+
                         <div class="slider__collection">
                             <div class="slider__item">
                                 <img class="slider__image" src="img/promotions/akciya-1.webp" alt="akciya1">
