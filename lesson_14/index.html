@@ -136,10 +136,10 @@
                                         required>
                                     <input type="text" class="info-block__input" name="form[]" placeholder="По батькові"
                                         required>
-                                    <div class="info-block__checkbox-block">
-                                        <label class="info-block__checkbox-lable">
-                                            <input type="checkbox" class="info-block__checkbox">
-                                            <span class="info-block__checkbox-text">Отримуватиме замовлення інша
+                                    <div class="info-block__checkbox-block checkbox-block">
+                                        <label class="checkbox-block__lable">
+                                            <input type="checkbox" class="checkbox-block__item">
+                                            <span class="checkbox-block__text">Отримуватиме замовлення інша
                                                 людина</span>
                                         </label>
                                     </div>
@@ -177,7 +177,8 @@
                                                 <p class="location__address">м. Київ, пров. Ізяславський 52, пов. 2</p>
                                             </div>
                                         </div>
-                                        <a href="" class="location__map-link btn btn--yellow btn--icon">На мапі</a>
+                                        <a href="https://maps.app.goo.gl/ekYfn6N84Q5Wc5G96"
+                                            class="location__map-link btn btn--yellow btn--icon">На мапі</a>
                                     </div>
                                 </fieldset>
                             </div>
@@ -193,13 +194,16 @@
                                         <input type="radio" checked class="payment-data__radio-btn"
                                             name="form[payment]">
                                         <span class="payment-data__radio-btn-text">Оплата карткою на сайті</span>
-                                        <img class="payment-data__radio-btn-image" src="img/order-section/master-card-logo.svg" alt="Мастеркард лого">
-                                        <img class="payment-data__radio-btn-image" src="img/order-section/visa-card-logo.svg" alt="Візакард лого">
+                                        <img class="payment-data__radio-btn-image"
+                                            src="img/order-section/master-card-logo.svg" alt="Мастеркард лого">
+                                        <img class="payment-data__radio-btn-image"
+                                            src="img/order-section/visa-card-logo.svg" alt="Візакард лого">
                                     </label>
                                     <label class="payment-data__label">
                                         <input type="radio" class="payment-data__radio-btn" name="form[payment]">
                                         <span class="payment-data__radio-btn-text">Privat Pay</span>
-                                        <img class="payment-data__radio-btn-image" src="img/order-section/privat-pay-logo.svg" alt="Приват-пей лого">
+                                        <img class="payment-data__radio-btn-image"
+                                            src="img/order-section/privat-pay-logo.svg" alt="Приват-пей лого">
                                     </label>
                                     <label class="payment-data__label">
                                         <input type="radio" class="payment-data__radio-btn" name="form[payment]">
@@ -208,14 +212,39 @@
                                     <label class="payment-data__label">
                                         <input type="radio" class="payment-data__radio-btn" name="form[payment]">
                                         <span class="payment-data__radio-btn-text">Оплата частинами ПриватБанк</span>
-                                        <img class="payment-data__radio-btn-image" src="img/order-section/privat-credit-logo.svg" alt="Приват-кредит лого">
+                                        <img class="payment-data__radio-btn-image"
+                                            src="img/order-section/privat-credit-logo.svg" alt="Приват-кредит лого">
                                     </label>
                                     <label class="payment-data__label">
                                         <input type="radio" class="payment-data__radio-btn" name="form[payment]">
                                         <span class="payment-data__radio-btn-text">Оплата частинами МоноБанк</span>
-                                        <img class="payment-data__radio-btn-image" src="img/order-section/mono-bank-logo.svg" alt="Моно-кредит лого">
+                                        <img class="payment-data__radio-btn-image"
+                                            src="img/order-section/mono-bank-logo.svg" alt="Моно-кредит лого">
                                     </label>
                                 </fieldset>
+                            </div>
+                            <div class="order-form__comment-data comment-data">
+                                <h3 class="comment-data__title block-title">Коментар до замовлення</h3>
+                                <textarea name="comment" id="comment" class="comment-data__text"
+                                    placeholder="Ваш коментар"></textarea>
+                            </div>
+                            <div class="order-form__confirm-order confirm-order">
+                                <div class="confirm-order__wrapper">
+                                    <div class="confirm-order__checkbox-block checkbox-block">
+                                        <label class="checkbox-block__lable">
+                                            <input type="checkbox" class="checkbox-block__item">
+                                            <span class="checkbox-block__text">Не передзвонюйте мені для підтвердження
+                                                замовлення</span>
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="confirm-order__btn btn btn--yellow">
+                                        ОФОРМИТИ ЗАМОВЛЕННЯ
+                                    </button>
+                                    <p class="confirm-order__agreemets">
+                                        Підтверджуючи замовлення, я приймаю умови
+                                        <a href="#" class="confirm-order__agreemets-link">Угоди користувача</a>
+                                    </p>
+                                </div>
                             </div>
                         </form>
                     </div>
