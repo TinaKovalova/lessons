@@ -34,6 +34,7 @@ body {
     flex-wrap: wrap;
     column-gap: 30px;
 }
+
 /* block title -------------------------*/
 
 .block-title {
@@ -513,6 +514,7 @@ body {
     border: 1px solid #D1D5D5;
 }
 
+
 .info-block__checkbox-block {
     flex-basis: 100%;
 }
@@ -553,7 +555,7 @@ body {
     outline: 2px solid transparent;
 }
 
-/* delivery-block */
+/* delivery-block -----------------------------------*/
 
 .order-form__delivery-data {}
 
@@ -581,7 +583,6 @@ body {
     flex-shrink: 0;
     padding: 17px;
     border-radius: 8px;
-    /* border: 3px solid  #FFBC57; */
     border: 3px solid #F8F8F8;
     background-color: #FFFFFF;
     display: flex;
@@ -685,6 +686,72 @@ body {
 
 .location__map-link.btn--icon::before {
     background-image: url("../img/order-section/map.svg");
+}
+
+/* payment - block -------------------------- */
+.order-form__payment-data>*:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.payment-data {}
+
+.payment-data__title::before {
+    background-image: url("../img/order-section/payment-icon.svg");
+}
+
+
+.payment-data__radio-btn-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.41;
+}
+
+.payment-data__label {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 10px;
+    margin-left: 34px;
+}
+
+.payment-data__label::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    background: url("../img/order-section/radiobtn.svg") center/ contain no-repeat;
+}
+
+.payment-data__label:has(>.payment-data__radio-btn:checked)::before {
+    background-image: url("../img/order-section/checked.svg");
+}
+
+.payment-data__radio-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.payment-data__radio-btn-text {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.payment-data__radio-btn-image {
+    flex-basis: 48px;
+    height: 32px;
+    flex-shrink: 0;
 }
 
 /* Footer */

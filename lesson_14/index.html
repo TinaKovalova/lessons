@@ -147,23 +147,24 @@
                             </div>
                             <div class="order-form__delivery-data delivery-data">
                                 <h3 class="delivery-data__title block-title">Вибір способу доставки</h3>
-                                <div class="delivery-data__info-block delivery-options">
+                                <fieldset class="delivery-data__info-block delivery-options">
                                     <label class="delivery-options__label">
-                                        <input type="radio" checked name="form[]" class="delivery-options__radio-btn">
+                                        <input type="radio" checked name="form[delivery]"
+                                            class="delivery-options__radio-btn">
                                         <img class="delivery-options__image" src="img/order-section/check-circle.svg"
                                             alt="Галочка в жовтому колі">
                                         <span class="delivery-options__delivery-way">Самовивіз із магазину</span>
                                         <span class="delivery-options__delivery-cost">Бесплатно</span>
                                     </label>
                                     <label class="delivery-options__label">
-                                        <input type="radio" name="form[]" class="delivery-options__radio-btn">
+                                        <input type="radio" name="form[delivery]" class="delivery-options__radio-btn">
                                         <img class="delivery-options__image" src="img/order-section/np.svg"
                                             alt="Галочка в жовтому колі">
                                         <span class="delivery-options__delivery-way">Доставка Нова Пошта</span>
                                         <span class="delivery-options__delivery-cost">&asymp; від 500 грн</span>
                                     </label>
                                     <label class="delivery-options__label">
-                                        <input type="radio" name="form[]" class="delivery-options__radio-btn">
+                                        <input type="radio" name="form[delivery]" class="delivery-options__radio-btn">
                                         <img class="delivery-options__image" src="img/order-section/courier.svg"
                                             alt="Галочка в жовтому колі">
                                         <span class="delivery-options__delivery-way">Доставка кур'єром</span>
@@ -178,7 +179,43 @@
                                         </div>
                                         <a href="" class="location__map-link btn btn--yellow btn--icon">На мапі</a>
                                     </div>
-                                </div>
+                                </fieldset>
+                            </div>
+                            <div class="order-form__payment-data payment-data">
+                                <h3 class="payment-data__title block-title">Вибір способу оплати</h3>
+                                <fieldset class="payment-data__radio-btn-block">
+                                    <label class="payment-data__label">
+                                        <input type="radio" class="payment-data__radio-btn" name="form[payment]">
+                                        <span class="payment-data__radio-btn-text">Готівкою при отриманні
+                                            (Післясплата)</span>
+                                    </label>
+                                    <label class="payment-data__label">
+                                        <input type="radio" checked class="payment-data__radio-btn"
+                                            name="form[payment]">
+                                        <span class="payment-data__radio-btn-text">Оплата карткою на сайті</span>
+                                        <img class="payment-data__radio-btn-image" src="img/order-section/master-card-logo.svg" alt="Мастеркард лого">
+                                        <img class="payment-data__radio-btn-image" src="img/order-section/visa-card-logo.svg" alt="Візакард лого">
+                                    </label>
+                                    <label class="payment-data__label">
+                                        <input type="radio" class="payment-data__radio-btn" name="form[payment]">
+                                        <span class="payment-data__radio-btn-text">Privat Pay</span>
+                                        <img class="payment-data__radio-btn-image" src="img/order-section/privat-pay-logo.svg" alt="Приват-пей лого">
+                                    </label>
+                                    <label class="payment-data__label">
+                                        <input type="radio" class="payment-data__radio-btn" name="form[payment]">
+                                        <span class="payment-data__radio-btn-text">Кредит від Krovato</span>
+                                    </label>
+                                    <label class="payment-data__label">
+                                        <input type="radio" class="payment-data__radio-btn" name="form[payment]">
+                                        <span class="payment-data__radio-btn-text">Оплата частинами ПриватБанк</span>
+                                        <img class="payment-data__radio-btn-image" src="img/order-section/privat-credit-logo.svg" alt="Приват-кредит лого">
+                                    </label>
+                                    <label class="payment-data__label">
+                                        <input type="radio" class="payment-data__radio-btn" name="form[payment]">
+                                        <span class="payment-data__radio-btn-text">Оплата частинами МоноБанк</span>
+                                        <img class="payment-data__radio-btn-image" src="img/order-section/mono-bank-logo.svg" alt="Моно-кредит лого">
+                                    </label>
+                                </fieldset>
                             </div>
                         </form>
                     </div>
