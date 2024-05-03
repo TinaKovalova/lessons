@@ -124,7 +124,7 @@
                     <div class="order-section__order-block">
                         <form action="#" class="order-section__form order-form">
                             <div class="order-form__customer-data customer-data">
-                                <h3 class="customer-data__title">Інформація про покупця</h3>
+                                <h3 class="customer-data__title block-title">Інформація про покупця</h3>
                                 <div class="customer-data__info-block info-block">
                                     <input type="text" class="info-block__input" name="form[]" placeholder="Прізвище"
                                         required>
@@ -145,12 +145,45 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="order-form__delivery-data delivery-data">
+                                <h3 class="delivery-data__title block-title">Вибір способу доставки</h3>
+                                <div class="delivery-data__info-block delivery-options">
+                                    <label class="delivery-options__label">
+                                        <input type="radio" checked name="form[]" class="delivery-options__radio-btn">
+                                        <img class="delivery-options__image" src="img/order-section/check-circle.svg"
+                                            alt="Галочка в жовтому колі">
+                                        <span class="delivery-options__delivery-way">Самовивіз із магазину</span>
+                                        <span class="delivery-options__delivery-cost">Бесплатно</span>
+                                    </label>
+                                    <label class="delivery-options__label">
+                                        <input type="radio" name="form[]" class="delivery-options__radio-btn">
+                                        <img class="delivery-options__image" src="img/order-section/np.svg"
+                                            alt="Галочка в жовтому колі">
+                                        <span class="delivery-options__delivery-way">Доставка Нова Пошта</span>
+                                        <span class="delivery-options__delivery-cost">&asymp; від 500 грн</span>
+                                    </label>
+                                    <label class="delivery-options__label">
+                                        <input type="radio" name="form[]" class="delivery-options__radio-btn">
+                                        <img class="delivery-options__image" src="img/order-section/courier.svg"
+                                            alt="Галочка в жовтому колі">
+                                        <span class="delivery-options__delivery-way">Доставка кур'єром</span>
+                                        <span class="delivery-options__delivery-cost">&asymp; від 200 грн</span>
+                                    </label>
+                                    <div class="location">
+                                        <div class="location__info">
+                                            <div class="location__text">
+                                                <p class="location__schedule">Графік роботи: щодня з 9:00 до 18:00</p>
+                                                <p class="location__address">м. Київ, пров. Ізяславський 52, пов. 2</p>
+                                            </div>
+                                        </div>
+                                        <a href="" class="location__map-link btn btn--yellow btn--icon">На мапі</a>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
-
             </div>
-
         </main>
         <footer class="footer">
             <div class="footer__container">
