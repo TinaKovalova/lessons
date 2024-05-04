@@ -605,6 +605,10 @@ body *:focus-visible {
     margin-bottom: 10px;
 }
 
+.delivery-options__label:has(>.delivery-options__radio-btn:checked) .delivery-options__image {
+    content: url("../img/order-section/check-circle.svg");
+}
+
 .delivery-options__delivery-way,
 .delivery-options__delivery-cost {
     font-weight: 400;
