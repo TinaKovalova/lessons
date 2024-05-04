@@ -126,21 +126,22 @@
                             <div class="order-form__customer-data customer-data">
                                 <h3 class="customer-data__title block-title">Інформація про покупця</h3>
                                 <div class="customer-data__info-block info-block">
-                                    <input type="text" class="info-block__input" name="form[]" placeholder="Прізвище"
-                                        required>
-                                    <input type="text" class="info-block__input" name="form[]"
+                                    <input class="info-block__input" type="text" name="surname" placeholder="Прізвище"
+                                        autocomplete="on" required>
+                                    <input class="info-block__input" type="text" name="tel" autocomplete="on"
                                         placeholder="Контактний телефон" required>
-                                    <input type="text" class="info-block__input" name="form[]" placeholder="Ім’я"
-                                        required>
-                                    <input type="email" class="info-block__input" name="form[]" placeholder="E-mail"
-                                        required>
-                                    <input type="text" class="info-block__input" name="form[]" placeholder="По батькові"
-                                        required>
+                                    <input class="info-block__input" type="text" name="name" autocomplete="on"
+                                        placeholder="Ім’я" required>
+                                    <input class="info-block__input" type="email" name="email" autocomplete="on"
+                                        placeholder="E-mail" required>
+                                    <input class="info-block__input" type="text" name="patronym" autocomplete="on"
+                                        placeholder="По батькові" required>
                                     <div class="info-block__checkbox-block checkbox-block">
                                         <label class="checkbox-block__lable">
                                             <input type="checkbox" class="checkbox-block__item">
-                                            <span class="checkbox-block__text">Отримуватиме замовлення інша
-                                                людина</span>
+                                            <span class="checkbox-block__text">
+                                                Отримуватиме замовлення інша людина
+                                            </span>
                                         </label>
                                     </div>
                                 </div>
@@ -149,22 +150,24 @@
                                 <h3 class="delivery-data__title block-title">Вибір способу доставки</h3>
                                 <fieldset class="delivery-data__info-block delivery-options">
                                     <label class="delivery-options__label">
-                                        <input type="radio" checked name="form[delivery]"
-                                            class="delivery-options__radio-btn">
+                                        <input class="delivery-options__radio-btn" type="radio" checked name="delivery"
+                                            value="self">
                                         <img class="delivery-options__image" src="img/order-section/check-circle.svg"
                                             alt="Галочка в жовтому колі">
                                         <span class="delivery-options__delivery-way">Самовивіз із магазину</span>
                                         <span class="delivery-options__delivery-cost">Бесплатно</span>
                                     </label>
                                     <label class="delivery-options__label">
-                                        <input type="radio" name="form[delivery]" class="delivery-options__radio-btn">
+                                        <input class="delivery-options__radio-btn" type="radio" name="delivery"
+                                            value="nova-poshta">
                                         <img class="delivery-options__image" src="img/order-section/np.svg"
                                             alt="Галочка в жовтому колі">
                                         <span class="delivery-options__delivery-way">Доставка Нова Пошта</span>
                                         <span class="delivery-options__delivery-cost">&asymp; від 500 грн</span>
                                     </label>
                                     <label class="delivery-options__label">
-                                        <input type="radio" name="form[delivery]" class="delivery-options__radio-btn">
+                                        <input class="delivery-options__radio-btn" type="radio" name="delivery"
+                                            value="courier">
                                         <img class="delivery-options__image" src="img/order-section/courier.svg"
                                             alt="Галочка в жовтому колі">
                                         <span class="delivery-options__delivery-way">Доставка кур'єром</span>
@@ -225,7 +228,7 @@
                             </div>
                             <div class="order-form__comment-data comment-data">
                                 <h3 class="comment-data__title block-title">Коментар до замовлення</h3>
-                                <textarea name="comment" id="comment" class="comment-data__text"
+                                <textarea class="comment-data__text" name="comment" id="comment"
                                     placeholder="Ваш коментар"></textarea>
                             </div>
                             <div class="order-form__confirm-order confirm-order">

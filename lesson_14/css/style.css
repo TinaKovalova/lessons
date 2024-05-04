@@ -8,6 +8,11 @@ body {
     font-weight: 600;
     color: #2B2929;
     background-color: #f8f8f8;
+    user-select: none;
+}
+
+body *:focus-visible {
+    outline-color: #FFBC57;
 }
 
 .wrapper {
@@ -28,12 +33,6 @@ body {
 }
 
 
-.section-title {
-    font-size: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 30px;
-}
 
 /* block title -------------------------*/
 
@@ -56,7 +55,7 @@ body {
 }
 
 
-/* main button -------------------------*/
+/* main button from HW13 -------------------------*/
 
 .btn {
     color: #FFFFFF;
@@ -89,7 +88,13 @@ body {
     flex-shrink: 0;
 }
 
-/* --------------------------------- */
+/* section title from HW13--------------------------------- */
+.section-title {
+    font-size: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
 
 .section-title__link {
     font-size: 19px;
@@ -126,6 +131,7 @@ body {
 /* checkbox-block -------------------------*/
 .checkbox-block__lable {
     position: relative;
+    display: inline-block;
 }
 
 .checkbox-block__item {
@@ -137,12 +143,13 @@ body {
     height: 0;
 }
 
-.checkbox-block__item:focus-visible+.checkbox-block__text::before {
-    border-color: #2B2929;
+.checkbox-block__lable:has(>.checkbox-block__item:focus-visible)>.checkbox-block__text::before {
+    border-color: #FFBC57;
 }
 
 .checkbox-block__item:checked+.checkbox-block__text::before {
     background-color: #FFBC57;
+    border-color: #FFBC57;
 }
 
 .checkbox-block__text {
@@ -161,7 +168,8 @@ body {
     outline: 2px solid transparent;
 }
 
-/* header */
+
+/* header from HW13 */
 
 /* header-top---------------------- */
 .header__top {
@@ -479,8 +487,6 @@ body {
 
 /* order-section  */
 
-.order-section {}
-
 .order-section__container {
     padding: 30px 0;
 }
@@ -489,8 +495,6 @@ body {
     margin-bottom: 40px;
 }
 
-.order-section__title {}
-
 .order-section__order-block {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -498,18 +502,14 @@ body {
     gap: 10px;
 }
 
-.order-section__form {}
-
 .order-form {
     flex-basis: 740px;
     border-radius: 8px;
-    /* padding: 27px 30px 30px; */
     display: flex;
     flex-direction: column;
     row-gap: 5px;
     background-color: #FFFFFF;
     box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
-
 }
 
 .order-form>*:not(:last-child) {
@@ -520,14 +520,9 @@ body {
     padding: 30px;
 }
 
-.order-form__customer-data {}
-
 .customer-data>*:not(:last-child) {
     margin-bottom: 30px;
 }
-
-.customer-data__title {}
-
 
 .customer-data__title::before {
     background-image: url("../img/order-section/info-icon.svg");
@@ -558,18 +553,13 @@ body {
 
 /* delivery-block -----------------------------------*/
 
-.order-form__delivery-data {}
-
 .delivery-data>*:not(:last-child) {
     margin-bottom: 30px;
-
 }
 
 .delivery-data__title::before {
     background-image: url("../img/order-section/delivery-icon.svg");
 }
-
-.delivery-data__info-block {}
 
 .delivery-options {
     display: flex;
@@ -602,7 +592,7 @@ body {
 }
 
 .delivery-options__label:has(>.delivery-options__radio-btn:focus-visible) {
-    box-shadow: 0 0 8px #FFBC57;
+    border-style: double;
 }
 
 .delivery-options__label:has(>.delivery-options__radio-btn:checked) {
@@ -683,6 +673,11 @@ body {
     padding-bottom: 13px;
 }
 
+.location__map-link:focus-visible {
+    outline-color: #FFBC57;
+    outline-offset: 2px;
+}
+
 .location__map-link.btn--icon::before {
     background-image: url("../img/order-section/map.svg");
 }
@@ -696,7 +691,6 @@ body {
 .payment-data__title::before {
     background-image: url("../img/order-section/payment-icon.svg");
 }
-
 
 .payment-data__radio-btn-block {
     display: flex;
@@ -724,11 +718,16 @@ body {
     top: calc(50% - 12px);
     width: 24px;
     height: 24px;
+    border-radius: 50%;
     background: url("../img/order-section/radiobtn.svg") center/ contain no-repeat;
 }
 
 .payment-data__label:has(>.payment-data__radio-btn:checked)::before {
     background-image: url("../img/order-section/checked.svg");
+}
+
+.payment-data__label:has(>.payment-data__radio-btn:focus-visible)::before {
+    box-shadow: 0 0 5px #FFBC57;
 }
 
 .payment-data__radio-btn {
@@ -800,6 +799,11 @@ body {
     padding: 8px 30px;
 }
 
+.confirm-order__btn:focus-visible {
+    outline-color: #FFBC57;
+    outline-offset: 2px;
+}
+
 .confirm-order__agreemets {
     color: #535353;
     font-size: 17px;
@@ -813,7 +817,7 @@ body {
     display: inline;
 }
 
-/* Footer */
+/* Footer  from HW 13*/
 
 .footer {
     font-size: 17px;
