@@ -226,7 +226,7 @@ body *:focus-visible {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 34px;
+    gap: 20px;
 }
 
 .burger-menu {
@@ -236,6 +236,7 @@ body *:focus-visible {
     height: 5px;
     background-color: #535353;
     border-radius: 8px;
+    display: none;
 }
 
 .burger-menu::before,
@@ -249,8 +250,6 @@ body *:focus-visible {
     border-radius: 8px;
 }
 
-
-
 .burger-menu::before {
     bottom: 15px;
 }
@@ -263,19 +262,21 @@ body *:focus-visible {
     flex-basis: 250px;
     height: 50px;
     flex-shrink: 0;
+    margin-right: 14px;
     background: url("../img/icons/logo-header.svg") center/contain no-repeat;
 }
 
-.header__middle-wrapper {
+/* .header__middle-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     flex-grow: 1;
-}
+} */
 
 .header__middle-btn {
     flex-shrink: 0;
+    order: 2;
 }
 
 .header__middle-btn.btn--icon::before {
@@ -287,6 +288,7 @@ body *:focus-visible {
     min-height: 50px;
     min-width: 50px;
     position: relative;
+    order: 3;
 }
 
 .search-form__input {
@@ -294,6 +296,7 @@ body *:focus-visible {
     border: 1px solid #B1B1B1;
     padding: 10px 40px 10px 15px;
     min-width: 50px;
+    height: 50px;
 }
 
 .search-form__input:focus {
@@ -321,6 +324,7 @@ body *:focus-visible {
     top: calc(50% - 12px);
     width: 24px;
     height: 24px;
+
 }
 
 .search-form__icon {
@@ -328,11 +332,12 @@ body *:focus-visible {
     object-fit: contain;
 }
 
-.header__middle-contacts {}
+/* .header__middle-contacts {} */
 
 .contacts {
     flex-basis: auto;
     flex-shrink: 0;
+    order: 4;
 
 }
 
@@ -388,7 +393,9 @@ body *:focus-visible {
 
 }
 
-.user-preferences {}
+.user-preferences {
+    order: 5;
+}
 
 .user-preferences__link {}
 
@@ -414,17 +421,47 @@ body *:focus-visible {
         height: 50px;
         border-radius: 50%;
         border: 2px solid #FFBC57;
-
     }
 
     .search-form__icon {
         width: 50%;
+    }
+
+    .search-form {
+        flex-basis: 50px;
+        flex-grow: 1;
     }
 }
 
 @media(max-width:767.98px) {
     .search-form__input::placeholder {
         opacity: 0;
+    }
+
+    .header__middle-container {
+        flex-wrap: wrap;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .contacts {
+        order: 1;
+    }
+
+    .logo {
+        margin-right: 0;
+        flex-basis: 60%;
+        flex-grow: 1;
+    }
+}
+
+@media(max-width:479.98px) {
+    .logo {
+        margin-right: 0;
+        flex-basis: 215px;
+
     }
 }
 
