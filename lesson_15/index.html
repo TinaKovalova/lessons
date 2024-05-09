@@ -71,16 +71,14 @@
             </div>
             <div class="header__middle">
                 <div class="header__middle-container">
-                    <div class="burger-menu"></div>
-                    <a href="#" class="logo"></a>
-                    <button class="header__middle-btn btn btn--yellow btn--icon">Каталог</button>
-                    <form class="search-form" action="#" name="search-form">
-                        <input type="search" class="search-form__input" placeholder="Пошук товарів">
-                        <button class="search-form__btn" type="button">
-                            <img class="search-form__icon" src="img/icons/search.svg" alt="Пошук">
-                        </button>
-                    </form>
-                    <div class="contacts">
+                    <div class="burger-menu">
+                        <div class="burger-menu__icon">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="header__logo logo"></a>
+                    <div class="header__middle-contacts contacts">
                         <div class="contacts__content-wrapper">
                             <div class="contacts__content">
                                 <p class="contacts__text">Щодня з 9:00 до 18:00</p>
@@ -109,30 +107,105 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header__user-preferences user-preferences">
-                        <a href="#" class="user-preferences__link " title="Бажане">
-                            <img class="user-preferences__image" src="img/icons/selected-colored.svg" alt="Бажане">
-                        </a>
-                        <a href="#" class="user-preferences__link " title="Кошик">
-                            <img class="user-preferences__image" src="img/icons/cart-colored.svg" alt="Кошик">
-                        </a>
+                    <div class="header__middle-wrapper">
+                        <button class="header__middle-btn btn btn--yellow btn--icon">Каталог</button>
+                        <form class="search-form" action="#" name="search-form">
+                            <input type="search" class="search-form__input" placeholder="Пошук товарів">
+                            <button class="search-form__btn" type="button">
+                                <img class="search-form__icon" src="img/icons/search.svg" alt="Пошук">
+                            </button>
+                        </form>
+                        <div class="header__middle-main-contacts contacts">
+                            <div class="contacts__content-wrapper">
+                                <div class="contacts__content">
+                                    <p class="contacts__text">Щодня з 9:00 до 18:00</p>
+                                    <ul class="contacts__tel-list">
+                                        <li class="contacts__tel-number">
+                                            <a href="tel:0679294545" class="contacts__tel-link">
+                                                067 929-45-45
+                                            </a>
+                                        </li>
+                                        <li class="contacts__tel-number">
+                                            <a href="tel:0501334545" class="contacts__tel-link">
+                                                050 133-45-45
+                                            </a>
+                                        </li>
+                                        <li class="contacts__tel-number">
+                                            <a href="tel:0931707545" class="contacts__tel-link">
+                                                093 170-75-45
+                                            </a>
+                                        </li>
+                                        <li class="contacts__tel-number">
+                                            <a href="#" class="contacts__tel-link">
+                                                Передзвоніть мені
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__user-preferences user-preferences">
+                            <a href="#" class="user-preferences__link " title="Бажане">
+                                <img class="user-preferences__image" src="img/icons/selected-colored.svg" alt="Бажане">
+                            </a>
+                            <a href="#" class="user-preferences__link " title="Кошик">
+                                <img class="user-preferences__image" src="img/icons/cart-colored.svg" alt="Кошик">
+                            </a>
+                        </div>
                     </div>
-                    <!-- <div class="header__middle-wrapper">
-                       
-                    </div> -->
                 </div>
-
             </div>
             <div class="header__bottom">
                 <div class="header__bottom-container">
+                    <div class="promotions-nav">
+                        <ul class="promotions-nav__menu">
+                            <li class="promotions-nav__item">
+                                <a href="#" class="promotions-nav__link promotions-nav__link--star">Акції</a>
+                            </li>
+                            <li class="promotions-nav__item ">
+                                <a href="#" class="promotions-nav__link promotions-nav__link--sales">Розпродаж</a>
+                            </li>
+                            <li class="promotions-nav__item">
+                                <a href="#" class="promotions-nav__link promotions-nav__link--credit">Купити в
+                                    кредит</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products-nav">
+                        <ul class="products-nav__menu">
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Дитяча</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Кухня</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Ванна</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Спальня</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Передпокій</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Вітальня</a>
+                            </li>
+                            <li class="products-nav__item">
+                                <a href="#" class="products-nav__link">Офіс</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </header>
-        <main class="page">
-        </main>
-        <footer class="footer">
-            <p class="footer__copyright">&copy; KROVATO - Технології сну - 2022. Всі права захищені.</p>
-        </footer>
+
+    </div>
+    </header>
+    <main class="page">
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; KROVATO - Технології сну - 2022. Всі права захищені.</p>
+    </footer>
     </div>
 </body>
 
