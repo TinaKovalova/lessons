@@ -62,7 +62,7 @@
                         <div class="languages">
                             <a href="#lang-list" class="languages__choice-link">UA</a>
                             <ul class="languages__list" id="lang-list">
-                                <li class="languages__item"><a href="#" class="languages__link" target="">UA</a></li>
+                                <li class="languages__item"><a href="#" class="languages__link">UA</a></li>
                                 <li class="languages__item"><a href="#" class="languages__link">EN</a></li>
                             </ul>
                         </div>
@@ -76,7 +76,6 @@
                             <span></span>
                         </div>
                     </div>
-
                     <a href="#" class="header__logo logo"></a>
                     <div class="header__middle-contacts contacts">
                         <div class="contacts__content-wrapper">
@@ -109,12 +108,17 @@
                     </div>
                     <div class="header__middle-wrapper">
                         <button class="header__middle-btn btn btn--yellow btn--icon">Каталог</button>
-                        <form class="search-form" action="#" name="search-form">
+                        <form class="search-form" action="#" name="search-form" id="search-form">
                             <input type="search" class="search-form__input" placeholder="Пошук товарів">
                             <button class="search-form__btn" type="button">
                                 <img class="search-form__icon" src="img/icons/search.svg" alt="Пошук">
                             </button>
                         </form>
+                        <div class="search-active">
+                            <button class="search-active__btn">
+                                <img class="search-active__icon" src="img/icons/search.svg" alt="Пошук">
+                            </button>
+                        </div>
                         <div class="header__middle-main-contacts contacts">
                             <div class="contacts__content-wrapper">
                                 <div class="contacts__content">
@@ -198,15 +202,14 @@
                     </div>
                 </div>
             </div>
-
+        </header>
+        <main class="page">
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; KROVATO - Технології сну - 2022. Всі права захищені.</p>
+        </footer>
     </div>
-    </header>
-    <main class="page">
-    </main>
-    <footer class="footer">
-        <p class="footer__copyright">&copy; KROVATO - Технології сну - 2022. Всі права захищені.</p>
-    </footer>
-    </div>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
