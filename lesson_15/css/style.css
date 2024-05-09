@@ -95,7 +95,7 @@ body *:focus-visible {
     border-radius: 8px;
     padding: 11px 20px;
     line-height: 1;
-    transition: box-shadow 0.3s;
+    transition: background-color 0.3s;
 }
 
 .btn--yellow {
@@ -112,7 +112,7 @@ body *:focus-visible {
 
 @media(any-hover:hover) {
     .btn:hover {
-        box-shadow: 0 0 3px #995d01;
+        background-color: #f7a427;
     }
 }
 
@@ -463,6 +463,7 @@ body *:focus-visible {
     width: 24px;
     height: 24px;
     background: url("../img/icons/arrow.svg") center/contain no-repeat;
+    transition: transform 0.3s;
 }
 
 .active .contacts__tel-list::after {
@@ -483,8 +484,16 @@ body *:focus-visible {
 }
 
 @media (any-hover:hover) {
+    .contacts__tel-list:hover::after {
+        transform: scale(1.1);
+    }
+
     .contacts__tel-link:hover {
         color: #FFBC57;
+    }
+
+    .contacts__content-wrapper:hover::before {
+        border: 2px solid #FFBC57;
     }
 }
 
@@ -500,7 +509,7 @@ body *:focus-visible {
 
 .user-preferences__link {
     border-radius: 50%;
-    transition: box-shadow 0.3s;
+    transition: background-color 0.3s;
 }
 
 
@@ -623,7 +632,7 @@ body *:focus-visible {
     }
 
     .user-preferences__link:hover {
-        box-shadow: 0 0 3px #995d01;
+        background-color: #f4b75b;
     }
 }
 
