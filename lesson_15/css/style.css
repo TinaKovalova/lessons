@@ -484,12 +484,14 @@ body *:focus-visible {
 }
 
 @media (any-hover:hover) {
+
     .contacts__tel-list:hover::after {
         transform: scale(1.1);
     }
 
+    .search-active__btn:hover,
     .contacts__tel-link:hover {
-        color: #FFBC57;
+        background-color: #FFBC57;
     }
 
     .contacts__content-wrapper:hover::before {
