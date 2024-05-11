@@ -383,6 +383,7 @@ body *:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s;
 }
 
 .search-active__icon {
@@ -484,14 +485,12 @@ body *:focus-visible {
 }
 
 @media (any-hover:hover) {
-
     .contacts__tel-list:hover::after {
         transform: scale(1.1);
     }
 
-    .search-active__btn:hover,
     .contacts__tel-link:hover {
-        background-color: #FFBC57;
+        color: #FFBC57;
     }
 
     .contacts__content-wrapper:hover::before {
@@ -633,6 +632,7 @@ body *:focus-visible {
         transform: scale(1.1);
     }
 
+    .search-active__btn:hover,
     .user-preferences__link:hover {
         background-color: #f4b75b;
     }
