@@ -50,12 +50,17 @@ body *:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../img/icons/arrow.svg") center / 8px 12px no-repeat;
-    transform: rotate(90deg);
+    background: url("../img/icons/arrow.svg") center / 12px 8px no-repeat;
+    /* transform: rotate(90deg); */
     border-radius: 8px;
     transition: background-size 0.3s;
 }
 
+@media(any-hover:hover) {
+    .activate-btn:hover {
+        transform: scale(1.2);
+    }
+}
 
 /* main button */
 
@@ -283,8 +288,29 @@ body *:focus-visible {
     background: url("../img/icons/search.svg") center/contain no-repeat;
 }
 
-.body-header__contacts {
+.body-header__contacts-block {
     flex: 0 1 230px;
+    position: relative;
+    align-self: stretch;
+}
+
+
+.body-header__contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.body-header__contacts.body-header__contacts--opened {
+    position: absolute;
+    transform: translate(-20px, -40px);
+    width: 270px;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
 }
 
 .contacts {
@@ -294,16 +320,23 @@ body *:focus-visible {
 
 }
 
+.contacts.body-header__contacts--opened {
+    align-items: flex-start;
+}
+
 .contacts::before {
     content: "";
+    flex-shrink: 0;
+    border: 2px solid transparent;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background: url("../img/icons/icon-tel.svg") center/46% no-repeat, #F8F8F8;
+    transition: border 0.3s;
 }
 
 .contacts__content {
-    flex-shrink: 1;
+    flex-shrink: 0;
     min-width: 136px;
     position: relative;
 }
@@ -320,24 +353,33 @@ body *:focus-visible {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
-    color: #2B2929;
+
+}
+
+.body-header__contacts.body-header__contacts--opened .contacts__current-number {
+    display: none;
 }
 
 .contacts__list {
-    position: absolute;
-    top: 22px;
-    left: 0;
-    /* display: none; */
-
+    display: none;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
-    background-color: #FFFFFF;
+    color: #2B2929;
+
 }
 
-.contacts__list--hidden {}
+.body-header__contacts.body-header__contacts--opened .contacts__list {
+    display: block;
+}
 
-.contacts__item {}
+.contacts__item {
+    transition: color 0.3s;
+}
+
+.contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+}
 
 .contacts__item:last-child {
     font-size: 19px;
@@ -346,9 +388,20 @@ body *:focus-visible {
 
 .contacts__link {}
 
-.contacts__btn {}
+.body-header__contacts.body-header__contacts--opened .contacts__btn {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
 
 .activate-btn {}
+
+.body-header__contacts.body-header__contacts--opened .contacts__btn {
+    background-image: url("../img/icons/cancel-button.svg");
+    background-size: 12px;
+}
+
+.body-header__contacts--opened {}
 
 .preferences {
     flex: 0 1 120px;
@@ -374,10 +427,17 @@ body *:focus-visible {
 .preferences__img {
     width: 50%;
     height: 50%;
-
 }
 
 @media(any-hover:hover) {
+    .body-header__contacts:has(>.contacts__btn:hover).contacts::before {
+        border: 2px solid #FFBC57;
+    }
+
+    .contacts__item:hover {
+        color: #FFBC57;
+    }
+
     .preferences__link:hover {
         background-color: #ffd492;
     }
