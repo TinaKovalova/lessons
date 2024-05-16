@@ -1,26 +1,25 @@
-const languagesListBlock = document.querySelector(".laguages__list-block");
-const langugesBtns = document.querySelectorAll(".laguages__btn");
+const languagesListBlock = document.querySelector(".languages__list-block");
+const langugesBtns = document.querySelectorAll(".languages__btn");
 const activeContactsBtn = document.querySelector(".contacts__btn");
 const contactsMainBtn = document.querySelector(".contacts__main-btn");
 const contactsBlock = document.querySelector(".body-header__contacts");
 const burgerMenuBtn = document.querySelector(".burger-menu-btn");
 const burgerHeader = document.querySelector(".burger-header");
-const formActiveBtn = document.querySelector(" .header__active-form-btn");
+const formActiveBtn = document.querySelector(".header__active-form-btn");
 const searchForm = document.querySelector(".body-header__form");
-
-console.log(burgerMenuBtn)
 
 for (let element of langugesBtns) {
     element.addEventListener("click", () => {
-        languagesListBlock.classList.toggle("laguages__list-block--hidden");
+        languagesListBlock.classList.toggle("languages__list-block--hidden");
     });
 }
-contactsMainBtn.addEventListener("click", () => {
+
+for (let element of [contactsMainBtn, activeContactsBtn]) {
+    element.addEventListener("click", () => {
     contactsBlock.classList.toggle("body-header__contacts--opened")
 })
-activeContactsBtn.addEventListener("click", () => {
-    contactsBlock.classList.toggle("body-header__contacts--opened")
-})
+}
+
 burgerMenuBtn.addEventListener("click", () => {
     burgerHeader.classList.toggle("header__burger--opened");
 })
