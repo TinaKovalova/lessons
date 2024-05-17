@@ -1,0 +1,243 @@
+@import url("fonts.css");
+@import url("reset.css");
+@import url("_header.css");
+@import url("_footer.css");
+
+
+body {
+    font-family: "ProximaNova", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.875;
+    color: #535353;
+    background-color: #F8F8F8;
+}
+
+body *:focus-visible {
+    outline: 2px double #FFBC57;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+/* Popular-section  */
+.popular-section {
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.popular {}
+
+.popular__container {}
+
+.popular__container>*:not(:last-child) {
+    margin-bottom: 40px;
+
+}
+
+.popular__title-block {}
+
+.section-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 30px
+}
+
+.section-title__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #2B2929;
+}
+
+.section-title__link-wrapper {
+    position: relative;
+}
+
+.section-title__link-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFBC57;
+    transition: width 0.4s;
+}
+
+.section-title__link {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.263;
+    color: #FFBC57;
+    display: flex;
+    column-gap: 10px;
+}
+
+
+.section-title__link::after {
+    content: "";
+    height: 1.263em;
+    width: 1.263em;
+    background: url("../img/icons/arrow-top-right.svg") center / 50% 50% no-repeat;
+}
+
+.popular__collection {}
+
+.popular-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.popular-products__item {}
+
+.product {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #E3E2E2;
+    background-color: #FFFFFF;
+    box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    transition: box-shadow 0.3s;
+
+}
+
+.product__img-block {
+    width: 260px;
+    height: 220px;
+    background-color: #E3E2E2;
+    border-radius: 8px;
+}
+
+.product__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 260 /220;
+    border-radius: 8px;
+}
+
+.product__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.product__size-block {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.692;
+}
+
+.product__size {}
+
+.product__title {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.263;
+    color: #2B2929;
+}
+
+.product__title-link {
+    transition: color 0.3s;
+}
+
+.product__availability {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.product__availability::before {
+    content: "";
+    height: 1.263em;
+    width: 1.263em;
+    background: url("../img/icons/check-green.svg");
+}
+
+.product__footer {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product__price {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__prev-price {
+    font-size: 15px;
+    line-height: 1.467;
+    text-decoration: line-through;
+    color: #E03D3D;
+}
+
+.product__current-price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #2B2929;
+}
+
+.product__actions-block {
+    display: flex;
+    column-gap: 10px;
+}
+
+.product__link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s;
+}
+
+.product__link--bg-gray {
+    background-color: #F8F8F8;
+}
+
+.product__link--bg-yellow {
+    background-color: #FFBC57;
+}
+
+.product__link-img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+@media(any-hover:hover) {
+    .section-title__link-wrapper:has(>.section-title__link:hover).section-title__link-wrapper::before {
+        width: 98%;
+    }
+
+
+    .product__title-link:hover {
+        color: #FFBC57;
+    }
+
+    .product__link:hover {
+        box-shadow: inset 0 0 8px #fb8200;
+    }
+
+    .product:hover {
+        box-shadow: -2px 4px 15px 0px rgba(0, 0, 0, 0.3);
+    }
+}
