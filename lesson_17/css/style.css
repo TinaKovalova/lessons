@@ -505,6 +505,7 @@ body *:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s;
 }
 
 .preferences__img {
@@ -570,6 +571,7 @@ body *:focus-visible {
 
     .header__active-form-btn {
         display: block;
+        transition: background-color 0.3s;
     }
 
 }
@@ -726,9 +728,10 @@ body *:focus-visible {
     padding-top: 100px;
     transform: translateX(-100%);
     transition: all .3s;
-    background-color: rgb(248, 235, 215);
+    background-color: #FFFFFF;
     overflow: auto;
 }
+
 
 .header__burger.header__burger--opened {
     transform: translateX(0);
