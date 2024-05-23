@@ -1,0 +1,30 @@
+@use "sass:math";
+@import "fonts";
+@import "reset";
+@import "variables";
+@import "_functions";
+
+body {
+    font-family: "Exo", sans-serif;
+    font-size: 18px;
+    //  line-height: 2.22;
+    font-weight: 400;
+    color: $textColor;
+    background-color: $backgroundColor;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+[class$="__container"] {
+    max-width: #{$containerWidth}px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+@import "_header.scss";
