@@ -81,8 +81,8 @@ body {
   font-family: "Exo", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  background-color: #000001;
 }
 
 .wrapper {
@@ -185,7 +185,7 @@ body {
   transition: background-color 0.3s;
 }
 .navigation__item:hover {
-  background-color: #6F00A9;
+  background-color: #6f00a9;
 }
 .social {
   -ms-flex-preferred-size: 7.6687116564%;
@@ -232,7 +232,7 @@ body {
 .burger-menu-btn span {
   width: 100%;
   height: 2px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
 }
 .burger-menu-btn span::before, .burger-menu-btn span::after {
@@ -272,7 +272,7 @@ body {
   left: 0;
   height: 130px;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: #000001;
 }
 @media (max-width: 991.98px) {
   .burger-menu::before {
