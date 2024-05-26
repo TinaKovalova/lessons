@@ -657,6 +657,12 @@ body {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+.best-edits {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.95)), color-stop(85.54%, rgba(0, 0, 0, 0.99))), url("../img/best-edits-section/tape-1.png") 0 -130px/cover;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.99) 85.54%), url("../img/best-edits-section/tape-1.png") 0 -130px/cover;
+}
 .best-edits__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -739,6 +745,7 @@ body {
     background-size: 0% 100%;
   }
 }
+
 .edits-collection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -752,6 +759,18 @@ body {
   max-width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
+}
+.edits-collection::-webkit-scrollbar {
+  height: 10px;
+}
+.edits-collection::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.edits-collection::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  outline: 1px solid #708090;
 }
 .edits-collection__item {
   -ms-flex-preferred-size: 360px;
@@ -807,7 +826,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
   border: 10px solid transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
