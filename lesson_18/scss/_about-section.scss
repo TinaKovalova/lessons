@@ -1,9 +1,13 @@
 .about {
-    // .about__container
-    background:
-        linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.99) 85.54%),
-        url("../img/about-section/bg.png") #d3d3d3 left -96px / 100% 161.298% no-repeat;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    &__wrapper {
+        background:
+            linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.99) 85.54%),
+            url("../img/about-section/bg.png") #d3d3d3 0 0 / cover no-repeat;
+    }
 
+    // .about__container
     &__container {
         padding-top: 120px;
         padding-bottom: 120px;
@@ -80,11 +84,10 @@
         display: flex;
         align-items: center;
         column-gap: 60px;
-        transform: translateX(100%);
-        animation: runnin-line 8s infinite linear backwards;
+        animation: runnin-line 10s infinite linear backwards;
         @keyframes runnin-line {
             0% {
-                transform: translateX(100%);
+                transform: translateX(0%);
             }
             100% {
                 transform: translateX(-100%);

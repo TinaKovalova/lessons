@@ -117,11 +117,10 @@ body {
   z-index: 10;
   width: 100%;
   background-color: #000001;
-  opacity: 1;
 }
 .header__container {
   padding-top: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,10 +316,6 @@ body {
           align-items: flex-end;
 }
 
-.hero {
-  padding-top: 20px;
-  padding-bottom: 80px;
-}
 .hero__wrapper {
   padding-top: 120px;
   overflow: hidden;
@@ -517,8 +512,12 @@ body {
 }
 
 .about {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), color-stop(85.54%, rgba(0, 0, 0, 0.99))), url("../img/about-section/bg.png") lightgray 0px -95.915px/100% 161.298% no-repeat;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.99) 85.54%), url("../img/about-section/bg.png") lightgray 0px -95.915px/100% 161.298% no-repeat;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.about__wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), color-stop(85.54%, rgba(0, 0, 0, 0.99))), url("../img/about-section/bg.png") #d3d3d3 0 0/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.99) 85.54%), url("../img/about-section/bg.png") #d3d3d3 0 0/cover no-repeat;
 }
 .about__container {
   padding-top: 120px;
@@ -610,16 +609,13 @@ body {
   -webkit-column-gap: 60px;
      -moz-column-gap: 60px;
           column-gap: 60px;
-  -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-animation: runnin-line 8s infinite linear backwards;
-          animation: runnin-line 8s infinite linear backwards;
+  -webkit-animation: runnin-line 10s infinite linear backwards;
+          animation: runnin-line 10s infinite linear backwards;
 }
 @-webkit-keyframes runnin-line {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   100% {
     -webkit-transform: translateX(-100%);
@@ -628,8 +624,8 @@ body {
 }
 @keyframes runnin-line {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   100% {
     -webkit-transform: translateX(-100%);
