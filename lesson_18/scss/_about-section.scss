@@ -1,0 +1,114 @@
+.about {
+    // .about__container
+
+    &__container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    // .about__content
+
+    &__content {
+        margin: 0 auto;
+        max-width: toPercent(1150, $containerWidth);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 60px;
+    }
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    // .about__title
+
+    &__title {
+        position: relative;
+        &::after {
+            content: "";
+            width: 133%;
+            height: 1px;
+            background: $gradient;
+            position: absolute;
+            bottom: -20px;
+            left: -16.61%;
+        }
+    }
+
+    // .about__text
+
+    &__text {
+        line-height: 2.222;
+        letter-spacing: -0.36px;
+        text-transform: capitalize;
+        text-align: center;
+        max-width: 992px;
+    }
+
+    // .about__experiences
+
+    &__experiences {
+    }
+}
+.section-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.167;
+    text-transform: uppercase;
+}
+.experiences {
+    // .experiences__list
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+
+    &__list {
+        font-family: "Orbitron", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.25;
+        text-transform: capitalize;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        column-gap: 60px;
+        transform: translateX(100%);
+        animation: runnin-line 8s infinite linear backwards;
+        @keyframes runnin-line {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    // .experiences__item
+
+    &__item {
+        min-width: max-content;
+        display: flex;
+        align-items: center;
+        column-gap: 60px;
+
+        &:not(:last-child):after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $gradient;
+            flex-shrink: 0;
+        }
+    }
+
+    // .experiences__link
+
+    &__link {
+    }
+}
