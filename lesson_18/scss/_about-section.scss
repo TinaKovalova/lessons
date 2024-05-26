@@ -34,17 +34,8 @@
 
     // .about__title
 
-    &__title {
-        position: relative;
-        &::after {
-            content: "";
-            width: 133%;
-            height: 1px;
-            background: $gradient;
-            position: absolute;
-            bottom: -20px;
-            left: -16.61%;
-        }
+    &__title::after {
+        left: -16.61%;
     }
 
     // .about__text
@@ -62,12 +53,7 @@
     &__experiences {
     }
 }
-.section-title {
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1.167;
-    text-transform: uppercase;
-}
+
 .experiences {
     // .experiences__list
     max-width: 100%;
