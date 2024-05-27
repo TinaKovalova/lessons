@@ -1,4 +1,11 @@
-@function toPercent($px, $from:100){
-    $result:math.div($px, $from) * 100%;
+@function toPercent($px, $from: 100) {
+    $result: math.div($px, $from) * 100%;
     @return $result;
+}
+@function adaptiveSize($minSize: 16, $maxSize, $minViewportWidth: 320, $maxViewportWidth) {
+    $resultSize: calc(
+        #{$minSize}px + ($maxSize - $minSize) *
+            ((100vw - #{$minViewportWidth}px) / ($maxViewportWidth - $minViewportWidth))
+    );
+    @return $resultSize;
 }
