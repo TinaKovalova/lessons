@@ -18,8 +18,10 @@ $heroPectureWidth: 616;
         &::after {
             content: "";
             position: absolute;
-            width: 480px;
-            height: 480px;
+            width: toVW(480); /*480px*/
+            height: toVW(480);
+            min-width: 120px;
+            min-height: 120px;
             border-radius: 480px;
             opacity: 0.3;
             background: linear-gradient(
@@ -30,14 +32,65 @@ $heroPectureWidth: 616;
                 rgba(0, 56, 255, 0.6) 100%
             );
             filter: blur(50px);
+            @media (max-width: $mobile) {
+                filter: blur(25px);
+            }
         }
         &::before {
-            left: -150px;
-            top: -114px;
+            left: 0;
+            top: 0;
+            transform: translate(toPercent(-130, 480), toPercent(-94, 480));
+            animation: movementDecor-1 8s infinite cubic-bezier(0.3, 0.64, 0.39, 0.76);
         }
         &::after {
-            right: -74px;
-            bottom: -135px;
+            left: 100%;
+            top: 100%;
+            transform: translate(toPercent(-115, 480), toPercent(-143, 480));
+            animation: movementDecor-2 8s infinite cubic-bezier(0.3, 0.64, 0.39, 0.76);
+        }
+        @keyframes movementDecor-1 {
+            0% {
+                left: 0;
+                top: 0;
+                transform: translate(toPercent(-130, 480), toPercent(-94, 480));
+            }
+            25% {
+                left: 100%;
+                top: 0;
+                transform: translate(toPercent(-115, 480), toPercent(-117, 480));
+            }
+            50% {
+                left: 100%;
+                top: 100%;
+                transform: translate(toPercent(-115, 480), toPercent(-143, 480));
+            }
+            100% {
+                left: 0;
+                top: 0;
+                transform: translate(toPercent(-130, 480), toPercent(-94, 480));
+            }
+        }
+        @keyframes movementDecor-2 {
+            0% {
+                left: 100%;
+                top: 100%;
+                transform: translate(toPercent(-115, 480), toPercent(-143, 480));
+            }
+            25% {
+                left: 0;
+                top: 100%;
+                transform: translate(toPercent(-115, 480), toPercent(-117, 480));
+            }
+            50% {
+                left: 0;
+                top: 0;
+                transform: translate(toPercent(-130, 480), toPercent(-94, 480));
+            }
+            100% {
+                left: 100%;
+                top: 100%;
+                transform: translate(toPercent(-115, 480), toPercent(-143, 480));
+            }
         }
     }
 
@@ -101,7 +154,7 @@ $heroPectureWidth: 616;
 
     &__title {
         // font-size: 80px;
-        font-size: adaptiveSize(32, 80, 320, $maxWidth);
+        font-size: adaptiveSize(32, 80, 353, $maxWidth);
         font-weight: 700;
         text-transform: uppercase;
     }
@@ -128,9 +181,10 @@ $heroPectureWidth: 616;
             box-shadow 0.3s;
         @media (max-width: $mobile) {
             padding: 8px 40px;
+            font-size: 1em;
             line-height: 1.428;
         }
-        @media (any-hover: hover) {
+        &:hover {
             background-color: $mainBrightColorHover;
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         }
@@ -140,6 +194,7 @@ $heroPectureWidth: 616;
         flex-basis: toPercent($heroPectureWidth, $maxWidthContainer);
         display: flex;
         justify-content: flex-end;
+        position: relative;
         @media (max-width: 860px) {
             flex-basis: 200px;
         }
@@ -156,7 +211,7 @@ $heroPectureWidth: 616;
         align-items: flex-start;
         justify-content: center;
         column-gap: 12px;
-        position: relative;
+
         @media (max-width: 1190px) {
             flex-shrink: 1;
         }
@@ -174,10 +229,12 @@ $heroPectureWidth: 616;
     // .hero__img--pr
     &__image-wrap--pr {
         width: toPercent(110, $heroPectureWidth);
+        min-width: 28px;
         height: toPercent(136, $heroPectureWidth);
+        min-height: 34px;
         position: absolute;
         top: 22px;
-        left: 56px;
+        left: toPercent(56, $heroPectureWidth); /*56px*/
         z-index: 2;
     }
     &__image-wrap--pr &__img {
@@ -190,11 +247,18 @@ $heroPectureWidth: 616;
     // .hero__img--ar
     &__image-wrap--ar {
         width: toPercent(70, $heroPectureWidth);
+        min-width: 20px;
         height: toPercent(80, $heroPectureWidth);
+        min-height: 28px;
         position: absolute;
-        top: 86px;
-        right: 82px;
+        top: 74px;
+        left: toPercent(519, $heroPectureWidth); /*519px*/
         z-index: 2;
+        @media (max-width: $tablet) {
+            flex-shrink: 1;
+            margin-right: 0;
+            top: 37px;
+        }
     }
     &__image-wrap--ar &__img {
         width: 100%;
