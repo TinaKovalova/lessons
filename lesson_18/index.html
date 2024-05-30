@@ -32,7 +32,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="social" data-da=".footer__container, 991.98">
+                <div class="social" data-da=".about__content, 991.98">
                     <a href="#" class="social__link">
                         <img src="img/facebook-icon.svg" alt="facebook" class="social__icon">
                     </a>
@@ -53,15 +53,18 @@
         </header>
         <main class="page">
             <section class="hero">
+                <div class="hero__header">
+                    <div class="hero__container"></div>
+                </div>
                 <div class="hero__wrapper">
                     <div class="hero__container">
-                        <div class="hero__content">
+                        <div data-da=".hero__header .hero__container, 860, 1" class="hero__content">
                             <span class="hero__subtitle">Jimmy Turner</span>
                             <h1 class="hero__title">Professional video editor</h1>
                             <p class="hero__text">Making your videos look more cool.</p>
                             <button class="hero__btn">lets talk</button>
                         </div>
-                        <div class="hero__image-block">
+                        <div data-da=".hero__header .hero__container, 860, 2" class="hero__image-block">
                             <div class="hero__picture">
                                 <div class="hero__image-wrap hero__image-wrap--pr">
                                     <img src="img/hero-section/pr.png" alt="Pr" class="hero__img">
@@ -72,9 +75,6 @@
                                 <div class="hero__image-wrap hero__image-wrap--lightning-left">
                                     <img src="img/hero-section/lightning-1.png" alt="lightning" class="hero__img">
                                 </div>
-                                <!--<div class="hero__image-wrap hero__image-wrap--lightning-right">
-                                    <img src="img/hero-section/lightning-1.png" alt="lightning" class="hero__img">
-                                </div> -->
                                 <div data-da=".hero__wrapper, 860, 3" class="hero__image-wrap hero__image-wrap--man">
                                     <img src="img/hero-section/man.png" alt="man" class="hero__img">
                                 </div>
@@ -98,7 +98,7 @@
                                     ordinary footage into extraordinary visual experiences.
                                 </p>
                             </div>
-                            <div data-da=".hero__wrapper, 860, 1" class="about__experiences experiences">
+                            <div data-da=".hero__header, 860, 2" class="about__experiences experiences">
                                 <ul class="experiences__list">
                                     <li class="experiences__item">
                                         <a href="#" class="experiences__link">Cash cow editing</a>

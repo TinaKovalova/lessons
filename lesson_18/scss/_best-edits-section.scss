@@ -1,16 +1,24 @@
 .best-edits {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 6.61vw;
+    padding-bottom: 6.61vw;
     background:
         linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.99) 85.54%),
         url("../img/best-edits-section/tape-1.png") 0 -130px / cover;
 
+    @media (max-width: $mobile) {
+        row-gap: 75px;
+        padding-top: 55px;
+        padding-bottom: 40px;
+    }
     // .best-edits__container
     &__container {
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        row-gap: 20px;
         align-items: flex-start;
+        @media (max-width: $mobile) {
+            row-gap: 20px;
+        }
     }
 
     // .best-edits__collection-control
@@ -55,6 +63,9 @@
                 background-size: 0% 100%;
             }
         }
+        @media (max-width: $mobile) {
+            display: none;
+        }
     }
 }
 
@@ -65,6 +76,10 @@
     max-width: 100%;
     overflow-y: hidden;
     overflow-x: auto;
+    padding-bottom: 8px;
+    @media (max-width: $mobile) {
+        column-gap: 22px;
+    }
     &::-webkit-scrollbar {
         height: 10px;
     }
@@ -80,15 +95,18 @@
     // .edits-collection__item
 
     &__item {
-        flex-basis: 360px;
+        flex-basis: adaptiveSize(193, 360, 320, $maxWidth);
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 40px;
+        @media (max-width: $mobile) {
+            row-gap: 22px;
+        }
     }
     &__img-block {
-        width: 360px;
-        height: 360px;
+        width: adaptiveSize(193, 360, 320, $maxWidth);
+        height: adaptiveSize(193, 360, 320, $maxWidth);
         position: relative;
     }
 
@@ -109,7 +127,7 @@
     // .edits-collection__img-name
 
     &__img-name {
-        font-size: 40px;
+        font-size: adaptiveSize(14, 40, 320, $maxWidth);
         font-weight: 700;
         text-transform: uppercase;
     }
@@ -128,8 +146,8 @@
         row-gap: 10px;
     }
     &__icon {
-        width: 120px;
-        height: 120px;
+        width: toPercent(120, 360);
+        height: toPercent(120, 360);
     }
     &__text {
         text-transform: uppercase;
@@ -138,6 +156,9 @@
         opacity: 0;
         margin-top: -1em;
         transition: all 0.5s;
+        @media (max-width: $mobile) {
+            display: none;
+        }
     }
     &:hover &__text {
         opacity: 1;

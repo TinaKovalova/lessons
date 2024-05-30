@@ -18,8 +18,7 @@
         z-index: 2;
         gap: 20px;
         @media (max-width: $tablet) {
-            padding-top: 40px;
-            padding-bottom: 7px;
+            padding: 40px 20px 7px;
         }
     }
 }
@@ -27,6 +26,11 @@
     font-size: 30px;
     font-weight: 400;
     letter-spacing: -3px;
+    @media (max-width: $mobile) {
+        font-size: 16px;
+        letter-spacing: -1.6px;
+        line-height: 1.25;
+    }
 }
 
 .navigation {
