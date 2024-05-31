@@ -153,7 +153,6 @@ $heroPectureWidth: 616;
     // .hero__title
 
     &__title {
-        // font-size: 80px;
         font-size: adaptiveSize(32, 80, 353, $maxWidth);
         font-weight: 700;
         text-transform: uppercase;
@@ -176,17 +175,17 @@ $heroPectureWidth: 616;
         font-family: "Orbitron", sans-serif;
         font-size: 20px;
         font-weight: 900;
-        transition:
-            background-color 0.3s,
-            box-shadow 0.3s;
+        transition: all 0.3s;
         @media (max-width: $mobile) {
             padding: 8px 40px;
             font-size: 1em;
             line-height: 1.428;
         }
-        &:hover {
-            background-color: $mainBrightColorHover;
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        @media (any-hover) {
+            &:hover {
+                background-color: $mainBrightColorHover;
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            }
         }
     }
 
@@ -203,7 +202,7 @@ $heroPectureWidth: 616;
     // .hero__picture
 
     &__picture {
-        flex-basis: 616px; /*616px*/
+        flex-basis: 616px;
         height: 100%;
         flex-shrink: 0;
         margin-right: -57px;
@@ -221,11 +220,6 @@ $heroPectureWidth: 616;
         }
     }
 
-    // .hero__img
-
-    &__img {
-    }
-
     // .hero__img--pr
     &__image-wrap--pr {
         width: toPercent(110, $heroPectureWidth);
@@ -234,7 +228,7 @@ $heroPectureWidth: 616;
         min-height: 34px;
         position: absolute;
         top: 22px;
-        left: toPercent(56, $heroPectureWidth); /*56px*/
+        left: toPercent(56, $heroPectureWidth);
         z-index: 2;
     }
     &__image-wrap--pr &__img {
@@ -252,7 +246,7 @@ $heroPectureWidth: 616;
         min-height: 28px;
         position: absolute;
         top: 74px;
-        left: toPercent(519, $heroPectureWidth); /*519px*/
+        left: toPercent(519, $heroPectureWidth);
         z-index: 2;
         @media (max-width: $tablet) {
             flex-shrink: 1;

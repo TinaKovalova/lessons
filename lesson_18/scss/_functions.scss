@@ -2,10 +2,12 @@
     $result: math.div($px, $from) * 100%;
     @return $result;
 }
+
 @function toVW($px, $from: $maxWidth) {
     $result: math.div($px, $from) * 100vw;
     @return $result;
 }
+
 @function adaptiveSize($minSize: 16, $maxSize, $minViewportWidth: 320, $maxViewportWidth) {
     $resultSize: calc(
         #{$minSize}px + ($maxSize - $minSize) *
