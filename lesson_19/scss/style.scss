@@ -1,0 +1,30 @@
+@use "sass:math";
+@import "fonts";
+@import "reset";
+@import "variables";
+@import "functions";
+@import "mixins";
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+[class$="__container"] {
+    max-width: #{$containerWidth}px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+@import "header";
+@import "main";
+@import "footer";

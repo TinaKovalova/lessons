@@ -1,0 +1,14 @@
+%underlineEffect {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $blackTextColor;
+    transition: width 0.3s;
+}
+@mixin fontParams($fontSize, $fontWeight: inherit, $lineHeight: inherit) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}
