@@ -436,10 +436,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
 }
 .styles__title {
   font-size: 34px;
+  -ms-flex-preferred-size: 55px;
+      flex-basis: 55px;
   text-transform: uppercase;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -447,9 +452,7 @@ body {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
-  position: absolute;
-  right: calc(100% - 15px);
-  top: 0;
+  margin-left: -60px;
 }
 .styles__presentation {
   min-height: 648px;

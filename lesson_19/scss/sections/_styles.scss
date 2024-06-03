@@ -3,25 +3,26 @@
 
     &__container {
         display: flex;
-        position: relative;
+        align-items: flex-start;
+        gap: 5px;
     }
 
     // .styles__title
 
     &__title {
         font-size: 34px;
+        flex-basis: 55px;
         text-transform: uppercase;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
-        position: absolute;
-        right: calc(100% - 15px);
-        top: 0;
+        margin-left: -60px;
     }
 
     // .styles__presentation
 
     &__presentation {
         min-height: 648px;
+        // flex-grow: 1;
         width: 100%;
         display: grid;
         gap: 24px;
