@@ -83,6 +83,28 @@
     font-family: "Open Sans", sans-serif;
     flex: 0 1 312px;
     min-height: 478px;
+    position: relative;
+
+    &__lables-block {
+        position: absolute;
+        top: 22px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    &__label {
+        @include fontParams(12px, 600);
+        text-transform: uppercase;
+        color: $whiteTextColor;
+        padding: 4px 12px;
+        &--sale {
+            background-color: $darkColor;
+        }
+        &--hot {
+            background-color: $primaryColor;
+        }
+    }
 
     // .product_link
 
@@ -142,6 +164,7 @@
         flex-basis: 40%;
         display: flex;
         justify-content: flex-end;
+        align-items: flex-end;
         column-gap: 12px;
         margin-left: auto;
     }
