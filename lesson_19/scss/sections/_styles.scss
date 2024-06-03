@@ -26,9 +26,12 @@
         display: grid;
         gap: 24px;
         $cellWidth: toVW(312, $maxWidth);
-        grid-template-columns: repeat(auto-fill, $cellWidth);
-        grid-template-rows: $cellWidth;
-        grid-auto-rows: $cellWidth;
+        grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
+        grid-template-rows: minmax(312px, 1fr);
+        grid-auto-rows: minmax(312px, 1fr);
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 .presentation {
@@ -38,6 +41,10 @@
         grid-row: span 2;
         grid-column: span 2;
         background-color: aqua;
+        @media (max-width: $mobile) {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
     }
 
     // .presentation__image4
@@ -46,6 +53,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top;
     }
 
     // .presentation__lable
