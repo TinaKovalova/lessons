@@ -7,6 +7,14 @@
     background-color: $blackTextColor;
     transition: width 0.3s;
 }
+
+%sectionTitle {
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    color: $blackTextColor;
+}
 @mixin fontParams($fontSize, $fontWeight: inherit, $lineHeight: inherit) {
     font-size: $fontSize;
     font-weight: $fontWeight;

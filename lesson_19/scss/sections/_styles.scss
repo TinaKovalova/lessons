@@ -37,14 +37,16 @@
 }
 .presentation {
     // .presentation__item
-
-    &__item:nth-child(5n-4) {
-        grid-row: span 2;
-        grid-column: span 2;
-        background-color: aqua;
-        @media (max-width: $mobile) {
-            grid-row: span 1;
-            grid-column: span 1;
+    &__item {
+        position: relative;
+        &:nth-child(5n-4) {
+            grid-row: span 2;
+            grid-column: span 2;
+            background-color: aqua;
+            @media (max-width: $mobile) {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
         }
     }
 
@@ -56,9 +58,22 @@
         object-fit: cover;
         object-position: top;
     }
+    &__lables-block {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 22px;
+    }
 
     // .presentation__lable
 
     &__lable {
+        font-family: "Open Sans", sans-serif;
+        @include fontParams(12px, 600, 1.2);
+        text-transform: uppercase;
+        padding: 4px 12px;
+        background-color: $darkColor;
+        color: $whiteTextColor;
     }
 }
