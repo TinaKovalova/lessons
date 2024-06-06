@@ -46,9 +46,6 @@
     &__link {
         padding: 19px 26px;
         @include fontParams(29px, 400, 1);
-        font-feature-settings:
-            "clig" off,
-            "liga" off;
         text-transform: capitalize;
         color: $whiteTextColor;
         background-color: $darkColor;
@@ -68,7 +65,7 @@
         }
         @media (any-hover) {
             &:hover {
-                background-color: $blackTextColor;
+                background-color: $primaryColor;
             }
         }
     }

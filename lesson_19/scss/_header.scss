@@ -34,11 +34,12 @@
     flex-shrink: 0;
     width: 25px;
     height: 25px;
-    background: url("../../img/icons/search.svg") center / contain no-repeat;
-    transition: transform 0.3s;
+    background-color: $darkColor;
+    mask: url("../img/icons/search.svg") center / contain no-repeat;
+    transition: background-color 0.3s;
     @media (any-hover) {
         &:hover {
-            transform: scale(1.2);
+            background-color: $primaryColor;
         }
     }
 }
@@ -69,9 +70,6 @@
 .actions {
     font-size: 18px;
     text-transform: capitalize;
-    // font-feature-settings:
-    //     "clig" off,
-    //     "liga" off;
     display: flex;
     align-items: center;
     column-gap: 22px;
@@ -82,11 +80,13 @@
         display: flex;
         align-items: center;
         column-gap: 8px;
-
         @media (any-hover) {
             &:hover {
-                span::after {
-                    width: 100%;
+                .actions__text {
+                    color: $primaryColor;
+                }
+                .actions__img {
+                    fill: $primaryColor;
                 }
             }
         }
@@ -98,16 +98,14 @@
         width: 20px;
         height: 19px;
         flex-shrink: 0;
+        fill: $darkColor;
+        transition: fill 0.3s;
     }
 
     // .actions__text
 
     &__text {
-        position: relative;
-        &::after {
-            content: "";
-            @extend %underlineEffect;
-        }
+        transition: color 0.3s;
         @media (max-width: $tablet) {
             display: none;
         }
@@ -120,7 +118,6 @@
         font-family: "Open Sans", sans-serif;
         line-height: 1.5;
         text-transform: capitalize;
-        // font-feature-settings: 'clig' off, 'liga' off;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -136,16 +133,10 @@
     // .navigation__link
 
     &__link {
-        position: relative;
-        &::after {
-            content: "";
-            @extend %underlineEffect;
-        }
+        transition: color;
         @media (any-hover) {
             &:hover {
-                &::after {
-                    width: 100%;
-                }
+                color: $primaryColor;
             }
         }
     }
