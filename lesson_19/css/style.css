@@ -1242,6 +1242,14 @@ body {
      -moz-column-gap: 4px;
           column-gap: 4px;
 }
+@media (any-hover) {
+  .bottom-footer__link:hover {
+    color: #ff6f61;
+  }
+  .bottom-footer__link:hover .bottom-footer__link-icon {
+    fill: #ff6f61;
+  }
+}
 .bottom-footer__link-icon {
   width: 1em;
   height: 0.875em;
