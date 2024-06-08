@@ -13,83 +13,13 @@
     &__title {
     }
     &__collection {
-        // display: flex;
-        // flex-wrap: wrap;
-        // align-items: center;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
         gap: 24px;
     }
 }
 
-.filters {
-    display: flex;
-    column-gap: 40px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
 
-    // .filters__categories-filter
-
-    &__categories-filter {
-        flex-grow: 1;
-    }
-
-    // .filters__expanded-filter-btn
-
-    &__expanded-filter-btn {
-        align-self: flex-start;
-        padding: 6px 15px;
-        background-color: $darkColor;
-        color: $whiteTextColor;
-        text-transform: capitalize;
-        display: flex;
-        align-items: center;
-        column-gap: 4px;
-        transition: background-color 0.3s;
-        &::before {
-            content: "";
-            width: 1.25em;
-            height: 1.25em;
-            background: url("../../img/icons/filter.svg") center / contain no-repeat;
-        }
-        @media (any-hover) {
-            &:hover {
-                background-color: $primaryColor;
-            }
-        }
-    }
-}
-.categories-filter {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px 40px;
-
-    // .categories-filter__item
-
-    &__item {
-    }
-
-    // .categories-filter__btn
-
-    &__btn {
-        font-weight: 600;
-        color: $lightColor;
-        text-transform: capitalize;
-        transition: color 0.3s;
-        @media (any-hover) {
-            &:hover {
-                color: $primaryColor;
-            }
-        }
-    }
-
-    // .categories-filter__btn--active
-
-    &__btn--active {
-        color: $blackTextColor;
-    }
-}
 .product {
     font-family: "Open Sans", sans-serif;
     flex: 0 1 312px;

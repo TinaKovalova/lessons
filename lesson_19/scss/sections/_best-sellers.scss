@@ -1,0 +1,48 @@
+.best-sellers {
+    padding: toVW(140) 0;
+
+    // .best-sellers__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+    }
+
+    // .best-sellers__title
+
+    &__title {
+    }
+
+    // .best-sellers__filters
+
+    &__filters {
+    }
+
+    // .best-sellers__slider
+
+    &__slider {
+        padding-bottom: 10px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            height: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px $lightColor-25;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $lightColor-25;
+            border-radius: 8px;
+            outline: 1px solid $whiteTextColor;
+        }
+    }
+    &__collection {
+        width: fit-content;
+        display: flex;
+        column-gap: 24px;
+    }
+    &__item {
+        flex-shrink: 0;
+    }
+}
