@@ -2,7 +2,7 @@
     padding: 80px 0;
     background-color: $darkColor-05;
 
-    background-image: url("../../img/decor/small-leaves.svg"), url("../../img/decor/big-leaves.svg");
+    background-image: url("../img/decor/small-leaves.svg"), url("../img/decor/big-leaves.svg");
     background-position:
         left toPercent(470, 562),
         right toPercent(395, 562);
@@ -61,7 +61,7 @@
             content: "";
             width: 1.03em;
             height: 1.03em;
-            background: url("../../img/icons/bag.svg") center / contain no-repeat;
+            background: url("../img/icons/bag.svg") center / contain no-repeat;
         }
         @media (any-hover) {
             &:hover {
