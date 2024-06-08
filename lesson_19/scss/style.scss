@@ -25,6 +25,9 @@ body {
     padding-right: 15px;
     margin: 0 auto;
 }
+.section-title {
+    @extend %sectionTitle;
+}
 @import "header";
 @import "main";
 @import "footer";

@@ -81,7 +81,7 @@ textarea {
           appearance: none;
 }
 
-.products__title {
+.section-title {
   font-size: 50px;
   font-weight: 500;
   text-transform: capitalize;
@@ -771,4 +771,82 @@ body {
   text-decoration: line-through;
   text-decoration-color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
+}
+
+.brand-banner {
+  min-height: 776px;
+  background: url("../../img/brand-banner/bg.png") top right/cover no-repeat;
+}
+.brand-banner__container {
+  padding-top: 233px;
+  padding-bottom: 93px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.brand-banner__content {
+  -ms-flex-preferred-size: 504px;
+      flex-basis: 504px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 55px;
+  margin-right: 33px;
+}
+.brand-banner__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 60px;
+  position: relative;
+}
+.brand-banner__title::after {
+  content: "";
+  position: absolute;
+  left: 84.2931937173%;
+  bottom: -55.5555555556%;
+  width: 383.2460732984%;
+  height: 381.4814814815%;
+  background: url("../../img/brand-banner/Zara_Logo-shadow.png") 0 0/contain no-repeat;
+}
+.brand-banner__title-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+}
+.brand-banner__logo {
+  width: 191px;
+  height: 81px;
+}
+.brand-banner__text {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.538;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+.brand-banner__link {
+  padding: 19px 26px;
+  color: #1e2832;
+  font-size: 29px;
+  background-color: #ffffff;
+  text-transform: capitalize;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+@media (any-hover) {
+  .brand-banner__link:hover {
+    background-color: #ff6f61;
+  }
 }
