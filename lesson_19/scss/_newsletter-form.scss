@@ -1,0 +1,46 @@
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 74px;
+
+    // .newsletter-form__title
+
+    &__title {
+        @extend .section-title;
+    }
+
+    // .newsletter-form__controlls
+
+    &__controlls {
+        display: flex;
+        gap: 26px;
+        color: $darkColor;
+    }
+
+    // .newsletter-form__input
+
+    &__input {
+        flex-grow: 1;
+        padding: 0 15px 13px;
+        border-bottom: 2px solid $darkColor;
+        color: $darkColor;
+        &:focus {
+            outline-color: $lightColor-25;
+        }
+
+        &::placeholder {
+            text-transform: capitalize;
+            color: $darkColor-50;
+            font-weight: 600;
+        }
+    }
+
+    // .newsletter-form__btn
+
+    &__btn {
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        padding: 0 16px 10px;
+        border-bottom: 2px solid $darkColor;
+    }
+}
