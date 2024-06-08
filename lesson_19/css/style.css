@@ -123,7 +123,7 @@ textarea {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-.filters__expanded-filter-btn::before {
+.filters__expanded-filter-btn--icon::before {
   content: "";
   width: 1.25em;
   height: 1.25em;

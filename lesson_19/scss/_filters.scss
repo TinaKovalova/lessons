@@ -22,12 +22,15 @@
         align-items: center;
         column-gap: 4px;
         transition: background-color 0.3s;
-        &::before {
-            content: "";
-            width: 1.25em;
-            height: 1.25em;
-            background: url("../../img/icons/filter.svg") center / contain no-repeat;
+        &--icon {
+            &::before {
+                content: "";
+                width: 1.25em;
+                height: 1.25em;
+                background: url("../../img/icons/filter.svg") center / contain no-repeat;
+            }
         }
+
         @media (any-hover) {
             &:hover {
                 background-color: $primaryColor;
