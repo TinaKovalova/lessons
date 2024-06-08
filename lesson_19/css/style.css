@@ -176,8 +176,19 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 26px;
   color: #1e2832;
+}
+@media (max-width: 400px) {
+  .newsletter-form__controlls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .newsletter-form__input {
   -webkit-box-flex: 1;
@@ -974,6 +985,15 @@ body {
           flex-direction: column;
   row-gap: 60px;
 }
+.subscriptions__form {
+  width: 56.2962962963%;
+}
+@media (max-width: 767.98px) {
+  .subscriptions__form {
+    width: 90%;
+  }
+}
+
 .instagram-collection {
   width: 100%;
   display: -webkit-box;

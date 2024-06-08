@@ -20,6 +20,13 @@
 
     &__instagram-collection {
     }
+    &__form {
+        width: toPercent(760, $containerWidth);
+
+        @media (max-width: $mobile) {
+            width: 90%;
+        }
+    }
 }
 
 .instagram-collection {

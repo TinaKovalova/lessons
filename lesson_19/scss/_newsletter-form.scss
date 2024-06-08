@@ -13,8 +13,12 @@
 
     &__controlls {
         display: flex;
+        align-items: center;
         gap: 26px;
         color: $darkColor;
+        @media (max-width: 400px) {
+            flex-direction: column;
+        }
     }
 
     // .newsletter-form__input
