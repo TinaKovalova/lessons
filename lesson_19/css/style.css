@@ -326,7 +326,7 @@ body {
   content: "";
   width: 1.25em;
   height: 1.25em;
-  background: url("/img/icons/filter.svg") center/contain no-repeat;
+  background: url("../img/icons/filter.svg") center/contain no-repeat;
 }
 @media (any-hover) {
   .filters__expanded-filter-btn:hover {
@@ -869,7 +869,7 @@ body {
 
 .brand-banner {
   min-height: 776px;
-  background: url("/img/brand-banner/bg.png") top right/cover no-repeat;
+  background: url("../img/brand-banner/bg.png") top right/cover no-repeat;
 }
 .brand-banner__container {
   padding-top: 233px;
@@ -916,7 +916,7 @@ body {
   bottom: -55.5555555556%;
   width: 383.2460732984%;
   height: 381.4814814815%;
-  background: url("/img/brand-banner/Zara_Logo-shadow.png") 0 0/contain no-repeat;
+  background: url("../img/brand-banner/Zara_Logo-shadow.png") 0 0/contain no-repeat;
 }
 .brand-banner__title-text {
   position: absolute;
