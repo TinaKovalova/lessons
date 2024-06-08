@@ -46,5 +46,12 @@
         text-transform: uppercase;
         padding: 0 16px 10px;
         border-bottom: 2px solid $darkColor;
+        transition: all 0.3s;
+        @media (any-hover) {
+            &:hover {
+                color: $primaryColor;
+                border-color: $primaryColor;
+            }
+        }
     }
 }

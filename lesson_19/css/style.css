@@ -434,6 +434,14 @@ body {
   text-transform: uppercase;
   padding: 0 16px 10px;
   border-bottom: 2px solid #1e2832;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (any-hover) {
+  .newsletter-form__btn:hover {
+    color: #ff6f61;
+    border-color: #ff6f61;
+  }
 }
 
 .collections {
