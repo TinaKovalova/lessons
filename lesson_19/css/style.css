@@ -1049,8 +1049,8 @@ body {
 .instagram-collection__link {
   width: 100%;
   height: 100%;
-  -webkit-mask: url("/img/icons/instagram.svg") center/24% 24% no-repeat;
-          mask: url("/img/icons/instagram.svg") center/24% 24% no-repeat;
+  -webkit-mask: url("../img/icons/instagram.svg") center/24% 24% no-repeat;
+          mask: url("../img/icons/instagram.svg") center/24% 24% no-repeat;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
