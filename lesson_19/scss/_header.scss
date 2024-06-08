@@ -29,6 +29,13 @@
 
     &__bottom {
     }
+    & .logo {
+        flex-basis: 180px;
+        margin-left: toVW(198);
+        @media (max-width: $tablet) {
+            margin-left: 0;
+        }
+    }
 }
 .search-btn {
     flex-shrink: 0;
@@ -44,8 +51,6 @@
     }
 }
 .logo {
-    flex-basis: 180px;
-    margin-left: toVW(198);
     font-family: "AmstelvarAlpha", serif;
     font-size: 28px;
     color: $blackTextColor;
@@ -53,7 +58,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     column-gap: 8px;
     &::before,
     &::after {
@@ -62,9 +66,6 @@
         height: 15px;
         flex-shrink: 0;
         background: url("../img/decor/logo-decor.svg") center / contain no-repeat;
-    }
-    @media (max-width: $tablet) {
-        margin-left: 0;
     }
 }
 .actions {

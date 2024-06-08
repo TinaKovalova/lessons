@@ -13,6 +13,7 @@
     // .filters__expanded-filter-btn
 
     &__expanded-filter-btn {
+        flex-shrink: 0;
         align-self: flex-start;
         padding: 6px 15px;
         background-color: $darkColor;
@@ -47,6 +48,7 @@
     // .categories-filter__item
 
     &__item {
+        flex-shrink: 0;
     }
 
     // .categories-filter__btn

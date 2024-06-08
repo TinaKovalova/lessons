@@ -1,6 +1,6 @@
 .brand-banner {
     min-height: 776px;
-    background: url("../img/brand-banner/bg.png") top right / cover no-repeat;
+    background: url("/img/brand-banner/bg.png") top right / cover no-repeat;
 
     &__container {
         padding-top: 233px;
@@ -17,6 +17,9 @@
         flex-direction: column;
         row-gap: 55px;
         margin-right: 33px;
+        @media (max-width: $smallMobile) {
+            margin-right: 33px;
+        }
     }
 
     // .brand-banner__title
@@ -63,6 +66,8 @@
     // .brand-banner__link
 
     &__link {
+        flex-shrink: 0;
+        min-width: max-content;
         padding: 19px 26px;
         color: $darkColor;
         font-size: 29px;
