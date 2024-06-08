@@ -48,7 +48,7 @@
     &__link {
         width: 100%;
         height: 100%;
-        mask: url("../img/icons/instagram.svg") center / toPercent(48, 200) toPercent(48, 200) no-repeat;
+        mask: url("/img/icons/instagram.svg") center / toPercent(48, 200) toPercent(48, 200) no-repeat;
         transition: background-color 0.3s;
         @media (any-hover) {
             &:hover {
