@@ -2,11 +2,6 @@
     font-family: "Open Sans", sans-serif;
     text-transform: capitalize;
 
-    // .footer__container
-
-    &__container {
-    }
-
     // .footer__top
 
     &__top {
@@ -42,24 +37,13 @@
             flex-grow: 1;
         }
     }
-
-    // .top-footer__about-text
-
-    &__about-text {
-    }
-
-    // .top-footer__menu
-
-    &__menu {
-    }
-
-    // .top-footer__item
 }
 
 .widgets {
     display: flex;
     align-items: center;
     gap: 20px 36px;
+
     // .widgets__item
 
     &__item {
@@ -101,10 +85,6 @@
     @media (max-width: $tablet) {
         flex-grow: 1;
     }
-    // .menu-footer__item
-
-    &__item {
-    }
 
     // .menu-footer__item-title
 
@@ -123,10 +103,6 @@
     flex-direction: column;
     row-gap: 12px;
     color: $darkColor;
-    // .sub-menu__item
-
-    &__item {
-    }
 
     // .sub-menu__link
 
@@ -149,7 +125,6 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-
         gap: 20px;
     }
     // .bottom-footer__licence

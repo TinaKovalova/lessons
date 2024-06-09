@@ -864,6 +864,7 @@ body:has(.header__bottom--open) {
           flex-grow: 1;
   text-align: end;
 }
+
 .products {
   padding: 7.2916666667vw 0;
 }
@@ -1332,6 +1333,7 @@ body:has(.header__bottom--open) {
             flex-grow: 1;
   }
 }
+
 .widgets {
   display: -webkit-box;
   display: -ms-flexbox;
