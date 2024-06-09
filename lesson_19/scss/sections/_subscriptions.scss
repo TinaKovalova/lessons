@@ -46,13 +46,39 @@
     // .instagram-collection__link
 
     &__link {
+        position: relative;
         width: 100%;
         height: 100%;
-        mask: url("../img/icons/instagram.svg") center / toPercent(48, 200) toPercent(48, 200) no-repeat;
-        transition: background-color 0.3s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $darkColor-50 center / cover;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $whiteTextColor;
+            mask: url("../img/icons/instagram.svg") center / toPercent(48, 200) toPercent(48, 200) no-repeat;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
         @media (any-hover) {
             &:hover {
-                background-color: $whiteTextColor;
+                &::before,
+                &::after {
+                    opacity: 1;
+                }
             }
         }
     }
