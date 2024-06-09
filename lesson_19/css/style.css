@@ -257,8 +257,14 @@ body:has(.header__bottom--open) {
   width: 25px;
   height: 25px;
   background-color: #1e2832;
-  -webkit-mask: url("../img/icons/search.svg") center/contain no-repeat;
-          mask: url("../img/icons/search.svg") center/contain no-repeat;
+  -webkit-mask-image: url("../img/icons/search.svg");
+          mask-image: url("../img/icons/search.svg");
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
@@ -1252,8 +1258,14 @@ body:has(.header__bottom--open) {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  -webkit-mask: url("../img/icons/instagram.svg") center/24% 24% no-repeat;
-          mask: url("../img/icons/instagram.svg") center/24% 24% no-repeat;
+  -webkit-mask-image: url("../img/icons/instagram.svg");
+          mask-image: url("../img/icons/instagram.svg");
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 24% 24%;
+          mask-size: 24% 24%;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;

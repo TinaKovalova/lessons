@@ -113,7 +113,10 @@
     width: 25px;
     height: 25px;
     background-color: $darkColor;
-    mask: url("../img/icons/search.svg") center / contain no-repeat;
+    mask-image: url("../img/icons/search.svg");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
     transition: background-color 0.3s;
     @media (any-hover) {
         &:hover {
