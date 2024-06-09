@@ -1,7 +1,29 @@
 .header {
     background-color: $darkColor-05;
     position: sticky;
+    top: 0;
+    z-index: 50;
     width: 100%;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: $whiteTextColor;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background: $darkColor-05;
+    }
 
     // .header__container
 
@@ -14,6 +36,8 @@
     // .header__top
 
     &__top {
+        position: relative;
+        z-index: 2;
         padding: 31px 0 25px 0;
         display: flex;
         flex-wrap: wrap;
@@ -23,11 +47,47 @@
         &:not(:last-child) {
             border-bottom: 1px solid #e3e3e3;
         }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: $whiteTextColor;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            background: $darkColor-05;
+        }
     }
 
     // .header__bottom
 
     &__bottom {
+        @media (max-width: $tablet) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            padding: 150px 15px 30px;
+            overflow-y: scroll;
+            background-color: $white-85;
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+            &--open {
+                transform: translateX(0);
+            }
+        }
     }
     & .logo {
         flex-basis: 180px;
@@ -124,6 +184,13 @@
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2em;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
     }
 
     // .navigation__item
@@ -140,5 +207,28 @@
                 color: $primaryColor;
             }
         }
+    }
+}
+.burger-btn {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    &::before,
+    &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $darkColor;
+    }
+    @media (max-width: $tablet) {
+        display: flex;
+    }
+    span {
+        width: 100%;
+        height: 3px;
+        background-color: $darkColor;
     }
 }
