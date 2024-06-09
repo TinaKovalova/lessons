@@ -3,8 +3,8 @@
     background: url("../img/brand-banner/bg.png") top right / cover no-repeat;
 
     &__container {
-        padding-top: 233px;
-        padding-bottom: 93px;
+        padding-top: adaptiveSize(190, 233); /*233px*/
+        padding-bottom: adaptiveSize(76, 93); /*93px*/
         display: flex;
         justify-content: flex-end;
     }
@@ -26,7 +26,8 @@
 
     &__title {
         display: flex;
-        font-size: 60px;
+        font-size: adaptiveSize(30, 60);
+
         position: relative;
         &::after {
             content: "";
@@ -58,7 +59,8 @@
     // .brand-banner__text
 
     &__text {
-        @include fontParams(26px, 400, 1.538);
+        font-size: adaptiveSize(20, 26);
+        line-height: 1.538;
         text-transform: capitalize;
         color: $whiteTextColor;
     }
@@ -70,7 +72,7 @@
         min-width: max-content;
         padding: 19px 26px;
         color: $darkColor;
-        font-size: 29px;
+        font-size: adaptiveSize(18, 29);
         background-color: $whiteTextColor;
         text-transform: capitalize;
         transition: background-color 0.3s;

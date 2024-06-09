@@ -1,7 +1,6 @@
 .collections {
-    padding: 80px 0;
+    padding: adaptiveSize(40, 80) 0;
     background-color: $darkColor-05;
-
     background-image: url("../img/decor/small-leaves.svg"), url("../img/decor/big-leaves.svg");
     background-position:
         left toPercent(470, 562),
@@ -12,9 +11,11 @@
 
     &__container {
         display: flex;
-        gap: toVW(98);
-        @media (max-width: 880px) {
+        gap: adaptiveSize(60, 98);
+        @media (max-width: $mobile) {
             flex-wrap: wrap;
+            // row-gap: 50px;
+            justify-content: center;
         }
     }
 
@@ -22,7 +23,7 @@
 
     &__content {
         flex-basis: 682px;
-        padding-top: 74px;
+        padding-top: adaptiveSize(32, 74);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -32,14 +33,16 @@
     // .collections__title
 
     &__title {
-        @include fontParams(72px, 300, 1);
+        font-size: adaptiveSize(36, 72);
+        font-weight: 300;
         text-transform: capitalize;
     }
 
     // .collections__text
 
     &__text {
-        @include fontParams(30px, 400, 1.83);
+        font-size: adaptiveSize(20, 30);
+        line-height: 1.83;
         text-transform: capitalize;
     }
 
@@ -47,7 +50,7 @@
 
     &__link {
         padding: 19px 26px;
-        @include fontParams(29px, 400, 1);
+        font-size: adaptiveSize(18, 29);
         text-transform: capitalize;
         color: $whiteTextColor;
         background-color: $darkColor;
@@ -75,9 +78,11 @@
     // .collections__img-block
 
     &__img-block {
-        flex-basis: 424px;
-        min-width: 400px;
-        height: 542px;
+        flex-basis: adaptiveSize(276, 424);
+        // flex-basis: 424px;
+        // min-width: 400px;
+        height: adaptiveSize(352, 542);
+        // height: 542px;
         flex-shrink: 0;
         margin-right: 20px;
         position: relative;
