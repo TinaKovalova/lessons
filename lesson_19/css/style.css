@@ -428,6 +428,30 @@ body:has(.header__bottom--open) {
     display: flex;
   }
 }
+.burger-btn.burger-btn--open {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.burger-btn.burger-btn--open::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 45%;
+      -ms-transform-origin: 45%;
+          transform-origin: 45%;
+}
+.burger-btn.burger-btn--open::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 45%;
+      -ms-transform-origin: 45%;
+          transform-origin: 45%;
+}
+.burger-btn.burger-btn--open span {
+  display: none;
+}
 .burger-btn span {
   width: 100%;
   height: 3px;

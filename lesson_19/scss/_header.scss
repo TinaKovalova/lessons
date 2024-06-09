@@ -240,6 +240,20 @@
     @media (max-width: $tablet) {
         display: flex;
     }
+    &.burger-btn--open {
+        justify-content: center;
+        &::before {
+            transform: rotate(45deg);
+            transform-origin: 45%;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            transform-origin: 45%;
+        }
+        span {
+            display: none;
+        }
+    }
     span {
         width: 100%;
         height: 3px;
