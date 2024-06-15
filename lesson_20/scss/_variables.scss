@@ -1,0 +1,17 @@
+$minWidth: 326;
+$maxWidth: 1440;
+$maxWidthContainer: 1240;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$laptop: 1199.98px;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$smallMobile: 479.98px;
+
+$mainTextColor: #0d1216;
+$textGradient: linear-gradient(90deg, #00c4cc 0%, #8b3dff 100%);
+
+$btn-color: #8b3dff;
+$btn-color-hover: #a875ff;
+$btn-color-active: #7921ed;

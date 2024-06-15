@@ -1,0 +1,23 @@
+//Percent
+@function percent($px, $from: 100) {
+    $result: math.div($px, $from) * 100%;
+    @return $result;
+}
+//REM
+@function toRem($px, $current: 16) {
+    $result: math.div($px, $current) + rem;
+    @return $result;
+}
+//EM
+@function toEm($px, $current: 16) {
+    $result: math.div($px, $current) + em;
+    @return $result;
+}
+
+@function adaptiveSize($minSize: 16, $maxSize, $minViewportWidth: 320, $maxViewportWidth: 1920) {
+    $resultSize: calc(
+        #{$minSize}px + ($maxSize - $minSize) *
+            ((100vw - #{$minViewportWidth}px) / ($maxViewportWidth - $minViewportWidth))
+    );
+    @return $resultSize;
+}
