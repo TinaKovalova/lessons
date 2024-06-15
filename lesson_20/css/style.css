@@ -106,7 +106,7 @@ body:has(.navigation.opened) {
 }
 
 [class$=__container] {
-  max-width: 1270/16rem;
+  max-width: 79.375rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   margin: 0 auto;
@@ -114,7 +114,6 @@ body:has(.navigation.opened) {
 
 .header {
   position: sticky;
-  left: 0;
   top: 0;
   z-index: 50;
   width: 100%;
@@ -229,7 +228,7 @@ body:has(.navigation.opened) {
     z-index: -5;
     min-width: 20rem;
     height: 100vh;
-    background-color: #f0f0f2;
+    background: url("../img/bg.webp") center/cover, #fff;
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
@@ -305,7 +304,7 @@ body:has(.navigation.opened) {
   height: 2.5rem;
 }
 .apps__link {
-  width: torem(135);
+  width: 8.4375rem;
   height: 100%;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
@@ -408,7 +407,7 @@ body:has(.navigation.opened) {
   top: calc(-113px + 113 * (100vw - 320px) / 1120);
 }
 .hero__container::before {
-  left: 15;
+  left: 0.9375rem;
 }
 .hero__container::after {
   left: max(280px, 33.3870967742%);
@@ -584,6 +583,12 @@ body:has(.navigation.opened) {
   width: 1.125rem;
   height: 1.125rem;
   background-color: #ffb342;
-  -webkit-mask: url("../img/star.svg") center/contain no-repeat;
-          mask: url("../img/star.svg") center/contain no-repeat;
+  -webkit-mask-image: url("../img/star.svg");
+          mask-image: url("../img/star.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }

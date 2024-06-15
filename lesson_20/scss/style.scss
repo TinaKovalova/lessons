@@ -25,7 +25,7 @@ body {
     flex-grow: 1;
 }
 [class$="__container"] {
-    max-width: toRem(#{$containerWidth});
+    max-width: toRem($containerWidth);
     padding-left: toRem(15);
     padding-right: toRem(15);
     margin: 0 auto;

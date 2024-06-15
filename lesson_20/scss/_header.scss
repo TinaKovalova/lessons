@@ -1,6 +1,5 @@
 .header {
     position: sticky;
-    left: 0;
     top: 0;
     z-index: 50;
     width: 100%;
@@ -96,8 +95,9 @@
             z-index: -5;
             min-width: toRem(320);
             height: 100vh;
-            // padding: toRem(100);
-            background-color: $btnColorLight;
+            background:
+                url("../img/bg.webp") center / cover,
+                #fff;
             transform: translateX(100%);
         }
         &.opened {
@@ -111,7 +111,6 @@
         flex-basis: toRem(354);
         flex-grow: 1;
         display: flex;
-        // justify-content: flex-end;
         flex-wrap: wrap;
         align-items: center;
         gap: toRem(20) toRem(48);
@@ -126,11 +125,6 @@
             margin-left: auto;
             font-size: toRem(30);
         }
-    }
-
-    // .navigation__item
-
-    &__item {
     }
 
     // .navigation__link
@@ -164,7 +158,7 @@
     // .apps__link
 
     &__link {
-        width: torem(135);
+        width: toRem(135);
         height: 100%;
         border-radius: 5px;
         transition: all 0.3s;

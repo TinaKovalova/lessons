@@ -18,7 +18,7 @@
             top: adaptiveSize(-113, 0);
         }
         &::before {
-            left: calc($containerPadding / 2);
+            left: toRem(calc($containerPadding / 2));
         }
         &::after {
             left: max(280px, toPercent(414, $maxWidthContainer));
@@ -36,9 +36,7 @@
     // .hero__content
 
     &__content {
-        // flex-grow: 1;
         flex-basis: toPercent(600, $containerWidth);
-
         padding: adaptiveSize(0, 94) 0;
         display: flex;
         flex-direction: column;
@@ -48,7 +46,6 @@
     // .hero__title
 
     &__title {
-        // font-size: toRem(64);
         font-size: adaptiveSize(40, 64);
         font-weight: 600;
         line-height: 1.219;
@@ -62,7 +59,6 @@
     // .hero__text
 
     &__text {
-        // font-size: toRem(20);
         font-size: adaptiveSize(16, 20);
         line-height: 1.6;
     }
@@ -111,10 +107,6 @@
         width: toRem(16);
         height: toRem(16);
     }
-    // .hero__rate
-
-    &__rate {
-    }
 
     // .hero__image-block
 
@@ -155,11 +147,6 @@
     font-size: toRem(14);
     line-height: 1.714;
 
-    // .rate__numbers
-
-    &__numbers {
-    }
-
     // .rate__text
 
     &__text {
@@ -172,12 +159,16 @@
     display: flex;
     align-items: center;
     column-gap: toRem(4);
+
     // .stars-list__item
 
     &__item {
         width: toRem(18);
         height: toRem(18);
         background-color: $starColor;
-        mask: url("../img/star.svg") center / contain no-repeat;
+        mask-image: url("../img/star.svg");
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
     }
 }
