@@ -3,6 +3,11 @@
     $result: math.div($px, $from) * 100%;
     @return $result;
 }
+//VW
+@function toVW($px, $from: 100) {
+    $result: math.div($px, $from) * 100vw;
+    @return $result;
+}
 //REM
 @function toRem($px, $current: 16) {
     $result: math.div($px, $current) + rem;
@@ -14,7 +19,7 @@
     @return $result;
 }
 
-@function adaptiveSize($minSize: 16, $maxSize, $minViewportWidth: 320, $maxViewportWidth: 1920) {
+@function adaptiveSize($minSize: 16, $maxSize, $minViewportWidth: 320, $maxViewportWidth: 1440) {
     $resultSize: calc(
         #{$minSize}px + ($maxSize - $minSize) *
             ((100vw - #{$minViewportWidth}px) / ($maxViewportWidth - $minViewportWidth))

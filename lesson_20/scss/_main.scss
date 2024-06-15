@@ -1,1 +1,183 @@
+.hero {
+    // .hero__contaner
 
+    &__container {
+        padding-top: adaptiveSize(49, 57);
+        padding-bottom: adaptiveSize(20, 43);
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(8);
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            height: 173px;
+            width: 50px;
+            background: url("../img/decor.svg") 0 0 / contain no-repeat;
+            position: absolute;
+            top: adaptiveSize(-113, 0);
+        }
+        &::before {
+            left: calc($containerPadding / 2);
+        }
+        &::after {
+            left: max(280px, toPercent(414, $maxWidthContainer));
+            transform: rotateY(180deg);
+        }
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            &::after {
+                left: calc(100% - 65px);
+            }
+        }
+    }
+
+    // .hero__content
+
+    &__content {
+        // flex-grow: 1;
+        flex-basis: toPercent(600, $containerWidth);
+
+        padding: adaptiveSize(0, 94) 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(24);
+    }
+
+    // .hero__title
+
+    &__title {
+        // font-size: toRem(64);
+        font-size: adaptiveSize(40, 64);
+        font-weight: 600;
+        line-height: 1.219;
+        span {
+            background: $textGradient;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    // .hero__text
+
+    &__text {
+        // font-size: toRem(20);
+        font-size: adaptiveSize(16, 20);
+        line-height: 1.6;
+    }
+
+    // .hero__btns
+
+    &__btns {
+        flex-basis: content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(12);
+    }
+
+    // .hero__link
+
+    &__link {
+        flex-shrink: 0;
+        padding: toRem(12) toRem(20);
+        border-radius: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: toRem(5);
+        transition: all 0.3s;
+        &--colored {
+            background-color: $btnColor;
+            color: #fff;
+        }
+        &--icon {
+            background-color: $btnColorLight;
+        }
+        @media (max-width: $smallMobile) {
+            flex-grow: 1;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $btnColorHover;
+                color: #fff;
+            }
+        }
+    }
+
+    // .hero__link-icon
+    &__link-icon {
+        width: toRem(16);
+        height: toRem(16);
+    }
+    // .hero__rate
+
+    &__rate {
+    }
+
+    // .hero__image-block
+
+    &__image-block {
+        flex-grow: 1;
+        flex-basis: toPercent(630, $containerWidth);
+        min-width: toRem(290);
+        position: relative;
+        &::after {
+            content: "";
+            width: toPercent(495, 630);
+            height: toPercent(735, 600);
+            background: url("../img/bg-2.svg") center / cover no-repeat;
+            position: absolute;
+            right: 0;
+            top: toPercent(-14, 600);
+            z-index: -1;
+            @media (max-width: $mobile) {
+                width: 100vw;
+                right: toRem(-15);
+            }
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        transform: translateX(15px);
+    }
+}
+.rate {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: toRem(6);
+    font-weight: 600;
+    font-size: toRem(14);
+    line-height: 1.714;
+
+    // .rate__numbers
+
+    &__numbers {
+    }
+
+    // .rate__text
+
+    &__text {
+        flex-shrink: 0;
+        margin-left: toRem(2);
+    }
+}
+.stars-list {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    column-gap: toRem(4);
+    // .stars-list__item
+
+    &__item {
+        width: toRem(18);
+        height: toRem(18);
+        background-color: $starColor;
+        mask: url("../img/star.svg") center / contain no-repeat;
+    }
+}
