@@ -11,6 +11,9 @@ body {
     line-height: 1.56;
     font-weight: 500;
     color: $mainTextColor;
+    &:has(.navigation.opened) {
+        overflow: hidden;
+    }
 }
 .wrapper {
     min-height: 100%;

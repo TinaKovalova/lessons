@@ -6,7 +6,7 @@
         padding-bottom: adaptiveSize(20, 43);
         display: flex;
         flex-wrap: wrap;
-        gap: toRem(8);
+        gap: toRem(24) toRem(8);
         position: relative;
         &::before,
         &::after {
