@@ -1,10 +1,9 @@
 .footer {
     // .footer__container
     &__container {
-        min-height: toRem(104);
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         font-size: toRem(14);
         font-weight: 600;
         line-height: 1.714;
