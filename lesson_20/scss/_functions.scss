@@ -1,5 +1,5 @@
 //Percent
-@function percent($px, $from: 100) {
+@function toPercent($px, $from: 100) {
     $result: math.div($px, $from) * 100%;
     @return $result;
 }

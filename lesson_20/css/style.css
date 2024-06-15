@@ -81,6 +81,7 @@ body {
   font-size: 1rem;
   line-height: 1.56;
   font-weight: 500;
+  color: #0d1216;
 }
 
 .wrapper {
@@ -109,7 +110,12 @@ body {
 }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   min-height: 4.6875rem;
+  padding: 1.0625rem 0;
 }
 .header__container {
   display: -webkit-box;
@@ -137,16 +143,41 @@ body {
           column-gap: 0.4375rem;
 }
 .logo__img-wrapper {
-  width: 2.375rem;
-  height: 2.3125rem;
+  width: 2rem;
+  height: 2.0625rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.logo__img-wrapper::after {
+  content: "";
+  width: 118.75%;
+  height: 112.1212121212%;
+  border-top-left-radius: 40% 35%;
+  border-bottom-left-radius: 40% 35%;
+  border-top-right-radius: 40% 35%;
+  border-bottom-right-radius: 40% 35%;
+  background: -webkit-gradient(linear, left top, right top, from(#00c4cc), to(#8b3dff));
+  background: linear-gradient(90deg, #00c4cc 0%, #8b3dff 100%);
+  position: absolute;
+  top: -0.125rem;
+  left: -0.1875rem;
+  z-index: -1;
+  -webkit-box-shadow: 0 0.25rem 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25rem 4px rgba(0, 0, 0, 0.25);
 }
 .logo__img {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .logo__text {
   font-family: "Comic Neue", cursive;
@@ -155,4 +186,78 @@ body {
   line-height: 1.2;
   letter-spacing: 0.006375rem;
   color: #0f0b2e;
+}
+
+.navigation {
+  -ms-flex-preferred-size: 22.125rem;
+      flex-basis: 22.125rem;
+  margin-left: auto;
+}
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem 13.5593220339%;
+  font-weight: 500;
+  letter-spacing: 0.005rem;
+  color: #313c45;
+}
+.navigation__link {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (any-hover: hover) {
+  .navigation__link:hover {
+    color: #0d1216;
+    font-weight: 700;
+  }
+}
+
+.apps__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.75rem;
+     -moz-column-gap: 0.75rem;
+          column-gap: 0.75rem;
+}
+.apps__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 2.5rem;
+}
+.apps__link {
+  width: torem(135);
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.apps__link--apple {
+  width: 7.5rem;
+}
+@media (any-hover: hover) {
+  .apps__link:hover {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+}
+.apps__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
